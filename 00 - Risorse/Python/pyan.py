@@ -451,7 +451,7 @@ class Graph(object):
 			else:
 				self.additional[fun]()
 
-		main_ax.legend()
+		main_ax.legend(loc='best')
 		x = self.dataX
 		for fun in resid:
 			mask = getattr(fun, 'mask', np.ones(len(x), dtype=bool))
