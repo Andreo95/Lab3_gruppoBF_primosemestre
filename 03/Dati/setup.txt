@@ -1,0 +1,24 @@
+RL = 981	#ohm 
+RB = 46.2e3	#kohm
+C1 = 10.55e-9	#nF
+
+## parte 5c:
+
+Vcc  = 10.46	#V
+Vint =  0.04	#V
+
+## parte 5e:
+Vrb  = 1.564	#V
+
+## parte 6:
+R1 = 15.03e3	#kOhm
+R2 = 98.4e3	#kOhm
+RL= 2.26e3	#kOhm
+
+R2_2=26.7 #kohm
+R2_3=15.0 #kohm
+R2_4=6.72 #kohm
+R2_5=3.28 #kohm
+R2_6=1.478 #kohm segnale alto piatto
+R2_7=2.37#kohm
+

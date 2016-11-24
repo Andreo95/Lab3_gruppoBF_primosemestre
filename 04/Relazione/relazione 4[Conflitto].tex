@@ -1,0 +1,135 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX TS-program = pdflatex
+
+%%% --- PREAMBLE --- %%%
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc} % OT1: basic, T1: western, T3 and T5: exotic, T4: lots of characters but WORSE READABILITY
+\usepackage[utf8x]{inputenc} % utf8x supports more characters than utf8
+\usepackage{graphicx} % import PNG, JPG and PDF with \includegraphics
+\usepackage[usenames,table]{xcolor} % \color
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools} % (!! PLACE BEFORE hyperref !!)
+\usepackage{xfrac} % \sfrac
+\usepackage{cancel} % \cancel \cancelto
+\usepackage{hyperref} % interactive links in TOC, URLs and references
+\usepackage{fixltx2e} % provides \textsubscript and makes some fixes
+\usepackage[version=3]{mhchem} % \ce (chemical formula)
+\usepackage{siunitx} % \num \si \SI
+\usepackage{alltt} % {alltt} (like verbatim but with commands)
+\usepackage{moreverb} % {listing}
+\usepackage{listings} % {lstlisting}
+\usepackage[overload]{textcase} % fixes \MakeUppercase and \MakeLowercase
+\usepackage[normalem]{ulem} % \uline \uwave \sout \xout
+\usepackage{enumerate} % adds options for {enumerate}
+\usepackage{paralist} % inline lists with {inparaenum}
+\usepackage[official]{eurosym} % \euro
+\usepackage{tabu} % {tabu} (like {tabular} with improvements)
+\usepackage{layout} % layout description
+\usepackage{multicol} % {multicols}
+\usepackage{lipsum} % filling text generator with \lipsum
+\usepackage[section]{placeins} % inhibits float figures from trepassing a section boundary
+\usepackage{subfig} % \subfloat to be used inside {figure}
+\usepackage{wrapfig} % {wrapfigure} (like {figure} but allows text to flow on its sides)
+\usepackage{ifthen} % \ifthenelse
+\usepackage{calc}
+\usepackage{array}
+\usepackage{multirow}
+
+\graphicspath{ {../Figs-Tabs/} } % graphics search directories
+\setcounter{tocdepth}{1} % -1: part, 0: chapter, 1: section, 2: subsection, 3: subsubsection
+
+\lstset{ %
+  language=C,
+  deletekeywords={},
+  morekeywords={},
+  backgroundcolor=\color{white},
+  basicstyle=\ttfamily\small,
+  commentstyle=\color{teal},
+  keywordstyle=\color{magenta},
+  stringstyle=\color{purple},
+  identifierstyle=\color{violet!80!black},
+  numbers=left,
+  numbersep=7pt,
+  numberstyle=\scriptsize\sffamily\color{gray},
+  stepnumber=1,
+  breakatwhitespace=false,
+  breaklines=true,
+  keepspaces=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  captionpos=none,
+}
+
+\newcommand{\swaphmargins}{
+\newlength{\tmplength}
+\setlength{\tmplength}{\oddsidemargin}
+\setlength{\oddsidemargin}{\evensidemargin}
+\setlength{\evensidemargin}{\tmplength}}
+
+\newcommand{\setdispacing}[1][0pt]{\setlength{\abovedisplayskip}{#1}
+\setlength{\belowdisplayskip}{#1}
+\setlength{\abovedisplayshortskip}{#1}
+\setlength{\belowdisplayshortskip}{#1}}
+
+\newcommand{\inv}[1]{\frac{1}{#1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\deriv}[2][x]{\frac{\dd #2}{\dd #1}}
+\newcommand{\derivn}[3][x]{\frac{\dd^{#2}#3}{\dd{#1}^{#2}}}
+\newcommand{\pardv}[2][x]{\frac{\partial #2}{\partial #1}}
+\newcommand{\pardvn}[3][x]{\frac{\partial^{#2}#3}{\partial{#1}^{#2}}}
+\newcommand{\integ}[2][x]{\int #2\,\dd #1}
+\newcommand{\invinteg}[2][x]{\int\frac{\dd #1}{#2}}
+\newcommand{\dinteg}[4]{\int_{#1}^{#2}#3\,\dd #4}
+%\renewcommand{\arcsin}{\operatorname{asin}}
+%\renewcommand{\arccos}{\operatorname{acos}}
+%\renewcommand{\arctan}{\operatorname{atan}}
+\DeclareMathOperator{\arccot}{arccot}
+\newcommand{\vel}{\vee}
+\newcommand{\et}{\wedge}
+
+\newcommand{\fwhm}{\text{FWHM}}
+\newcommand{\hwhm}{\text{HWHM}}
+
+\newcommand{\ndr}[1]{\footnote{#1 (n.d.r.)}}
+\newcommand{\fig}[1]{figura (\ref{f:#1})} %inserting reference to figures
+\newcommand{\tab}[1]{tabella (\ref{t:#1})} % inserting reference to tables
+\newcommand{\dof}{\text{ dof}} % degrees of freedom
+\newcommand{\paral}{\mathbin{\|}} % impedance parallel
+
+\newcommand{\insertpart}[2]{\input{#1}}
+
+%%% --- DOCUMENT --- %%%
+
+
+\sisetup{separate-uncertainty = true, per-mode = symbol, bracket-numbers = false, multi-part-units = single, table-number-alignment = center, range-phrase = \text{--}, range-units = brackets, output-complex-root =  \text{\ensuremath{j}} }
+
+%%%%% SIunitX example use:
+% \si{\kilo\volt\per\meter\squared} -> kV/m^2
+% \SI{1.222 (34)}{\joule\second}    -> 1.222 +- 0.034 Js
+% \SI{1.222 \pm 0.034}{\nF}         -> 1.222 +- 0.034 nF
+% use it plz
+
+
+
+\author{Gruppo BF \\ Andrea Luzio, Gianfranco Cordella, Valerio Lomanto}
+\title{Esercitazione N. 4 : Amplificatore a transistor}
+\date{30 Ottobre 2016}
+
+\begin{document}
+\maketitle
+
+\insertpart{parte1}{} % intro e parte 1 (V: dovrei aver detto tutto)
+
+\insertpart{parte2}{} % parte 2 (TODO: errori vari)
+
+\insertpart{parte3}{} % parte 3
+\insertpart{parte4}{} % parte 4
+\end{document}

@@ -1,0 +1,17 @@
+\section{Impedenza in ingresso}
+
+Ci proponiamo di valutare l'impedenza in ingresso $R_{in}$ del circuito (o più propriamente il suo modulo) alle frequenze di \SI{1.02(5)}{\kHz} e \SI{10.1(5)}{\kHz}, ponendo una resistenza $R_s = \SI{4.70 (7)}{\Mohm}$ tra l'uscita del generatore e l'ingresso del circuito; la tensione $V_2$ "vista" dal circuito all'ingresso è legata alla tensione $V_1$ senza resistenza e alle resistenze $R_{in}, R_s$ dalla formula del partitore, $V_1/V_2 = 1 + R_s/R_{in}$. Poiché non possiamo misurare direttamente la tensione in ingresso al circuito (dal momento che le impedenze di tutti gli strumenti a nostra disposizione sono confrontabili o inferiori a quelle che intendiamo misurare), sfruttiamo l'amplificazione lineare (alle tensioni a cui lavoravamo) per identificare il rapporto delle tensioni in ingresso con il rapporto delle tensioni in uscita, che possiamo misurare senza problemi. I valori raccolti sono riassunti in \tab{Z_in}.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ *{2}{S[table-figures-decimal=2]} S *{2}{S[table-figures-decimal=2]} } 
+		{$f$ [\si{\kHz}]} & {$V_{out,1}$ (senza $R_s$)} & {$V_{out,2}$ (con $R_s$)} & {$V_1/V_2$} & {$R_{in}$ [\si{\Mohm}]} \\
+		\midrule 
+		1.02(5)	&	2.48 (6)	&	1.18 (3)	&	2.09 (8)	&	4.3 (3)	\\
+		10.1(5)	&	2.54 (6)	&	0.520 (16)	&	4.88 (19)	&	1.21 (8) \\
+	\end{tabular} 
+	\caption{Misure relative all'impedenza in ingresso del circuito.} 
+	\label{t:Z_in} 
+\end{table}
+
+Si nota come $R_{in}$, appena compatibile con $R_3$ a frequenze più basse, se ne discosti molto ad alte frequenze. La causa di ciò è da ricercare nell'impedenza finita della giunzione di gate, che sebbene possa essere schematizzata come una resistenza essenzialmente infinita (essendo sempre polarizzata inversamente), ha una capacità certamente non nulla. Introducendo una capacità $C_{gs}$ tra gate e source nel modello a piccoli segnali del transistor, ci si attende per l'impedenza in ingresso (trascurando il condensatore, la cui impedenza è a queste frequenze molto minore delle altre in gioco) $Z_{in} = R_3 \paral (\inv{j \omega C_{gs}} + R_p)$, dove $R_p = \SI{227(3)}{\ohm}$ è la resistenza del potenziometro alla regolazione usata per le misure: si ricava così un valore di \SI{12.6 (7)}{\pico\farad} per $C_{gs}$, che però risulta piuttosto lontano dal valore massimo indicato nel datasheet per la capacità in ingresso (\SI{8}{\pico\farad}). Supponiamo che il valore di "Reverse Transfer Capacitance" indicato (\SI{4}{\pico\farad}) sia la capacità tra gate e drain; il risultato ottenuto per $C_{gs}$ è dunque interpretabile come la somma di queste due capacità (con cui è in accordo), il che ha senso poiché nel nostro modello, essendo le impedenze di queste capacità molto grandi, introdurre una capacità tra source e drain e una tra source e gate equivale essenzialmente a introdurre una capacità tra drain e ground pari alla somma delle due. Purtroppo avendo solo dati a due diverse frequenze e resistenze $R_1$ e $R_2$ relativamente molto piccole non è possibile ricavare le due capacità con un modello esatto, poiché la grande correlazione causa errori maggiori (di svariati ordini di grandezza) del valore stesso delle capacità.

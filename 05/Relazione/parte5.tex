@@ -1,0 +1,10 @@
+\section{Aumento del guadagno}
+Variando la resistenza del potenziometro ($R_2$) si modifica sia il guadagno in tensione che il punto di lavoro  in quanto, come visto nella sezione 3, la corrente di quiescienza dipende da $R_2$. Si osserva che il guadagno cresce sempre al diminuire di $R_2$: ponendola al minimo e misurando con l'oscilloscopio le ampiezze del segnale in ingresso ed in uscita (common source) si è ottenuto : \\
+$v_{in}= \SI{2.10(2)}{\V}$\\
+$v_{out}= \SI{5.32(4)}{\V}$\\
+$R_2= \SI{1.3(3)}{\ohm}$\\
+Da tali misure si ottine un guadagno pari a $A_V = \SI{2.53(4)}{}$. \\
+%Dall'equazione $R_2=-\frac{V_p}{I_d^{Q}}(1-\sqrt{\frac{I_d^{Q}}{I_{dss}}})$ si ricava numericamente 
+La nuova corrente di quiescienza è pari a $I_d^{Q}= \SI{13.72(8)}{\mA}$ da cui ricalcolando la transconduttanza $g_m= \SI{6.24 \pm 0.08}{\milli\siemens}$ (compatibile con quanto indicato nel datasheet per $V_{GS}=0$) e usando la formula $A_v=-\frac{g_m R_1}{(1+g_m R_2)}$  si ottiene:\\
+$A_v= \SI{3.41(4)}{}$.\\
+Tale risultato non è compatibile con quello misurato, ma non ci è chiaro da dove derivi questa grande discrepanza.

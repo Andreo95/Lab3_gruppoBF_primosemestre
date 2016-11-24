@@ -1,0 +1,9 @@
+##2_b
+100Hz guadagno 1
+4.7 pm 0.1 kHz guadagno -3dB
+
+##3_b
+10 kHz guadagno 1
+461.6 Hz guadagno -3dB
+
+

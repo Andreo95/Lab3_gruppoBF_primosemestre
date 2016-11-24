@@ -1,0 +1,11 @@
+aa=((X/dX**2).sum()*(Y**2/dX**2).sum()-(Y/dX**2).sum()*(Y*X/dX**2).sum())/((1/dX**2).sum()*(Y**2/dX**2).sum()-((Y/dX**2).sum()**2))
+bb=(-(X/dX**2).sum()*(Y/dX**2).sum()+(1/dX**2).sum()*(Y*X/dX**2).sum())/((1/dX**2).sum()*(Y**2/dX**2).sum()-((Y/dX**2).sum()**2))
+print("gne")
+print(1/aa)
+print(bb/aa)
+daa=((Y**2/dX**2).sum())**(0.5)/((1/dX**2).sum()*(Y**2/dX**2).sum()-((Y/dX**2).sum()**2))**(0.5)
+dbb=((1/dX**2).sum())**(0.5)/((1/dX**2).sum()*(Y**2/dX**2).sum()-((Y/dX**2).sum()**2))**(0.5)
+dV=da/(a**2)
+rg=b/a
+drg=((db/b)+(da/a))*rg
+print(daa/a**2, "  ",((db/b)+(da/a))*rg)

@@ -1,0 +1,11 @@
+#prima
+DV_res=5.07 #V
+VGS=-1.706 #V
+#dopo (nuova resistenza 551)
+DV_res=3.78 #V
+VGS=-1.25 #V
+
+
+
+
+ 

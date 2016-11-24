@@ -1,0 +1,40 @@
+#ingresso_alto
+Vin = 5	#volt
+Vbe = 644	#millivolt
+Vout= 23.6-26.4	#millivolt
+
+#ingresso_basso
+Vin= 0-1.6	#millivolt
+Vbe = 720_-720 #microvolt
+Vout= 4.96 #volt
+
+## 100 kOhm
+
+# input rising edge:
+rise_trd = 210e-9	#ns
+rise_td  = 250e-9	#ns
+
+#input falling edge:
+fall_trs = 4.76e-6	#us
+fall_ts  = 1.68e-6	#us
+
+
+## 3.3 kOhm (approx.)
+
+# input rising edge:
+rise_trd = 250e-9	#ns
+rise_td  = 750e-9	#ns
+
+#input falling edge:
+fall_trs = 900e-9	#ns
+fall_ts  = 1.0e-6	#us
+
+## 2.2 kOhm (approx.)
+
+# input rising edge:
+rise_trd = 300e-9	#ns
+rise_td  = 3.0e-6	#us
+
+#input falling edge:
+fall_trs = 200e-9	#ns
+fall_ts  = 800e-9	#ns

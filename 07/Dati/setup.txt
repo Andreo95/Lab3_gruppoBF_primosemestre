@@ -1,0 +1,35 @@
+c_1 = 21.5 #nF
+c_2 = 1.059 #nF
+c_3 = 1.036 #nF
+
+#parte A
+V_os = (35.2 +28.4)*1e-3/2 #V
+V
+#punto 1
+
+#parte B
+c_t =  1.059 #nF
+R_2 =  99.68 #ohm
+R_1 = 98.5e3 #ohm
+c_f =  1.036 #nF
+V_sh = 12.6 -(-13) #V (picco)
+V_in = 6.24-(-6.40) #V
+V_out = 14.6-(-14.6) #V
+V_lim = 104 -(-152) #V
+V_soglia = 160 <-->190 #mV
+
+#parte C
+R_1 =  9.93e3 #ohm
+R_2 = 2.27e3 #ohm
+V_soglia+ = 2.72 #V
+V_soglia- = -2.64 #V
+
+#parte D
+R =  972e3 #ohm
+C_3 = 1.036 #nF
+R_3 =  972 #ohm
+R_1 =  9.88e3 #ohm
+R_2 =  9.88e3 #ohm
+V_out = 7.04 -6.72 #V
+V_+ = 3.56 -3.40 #V
+V_- = 3.60 -3.44 #V

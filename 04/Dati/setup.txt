@@ -1,0 +1,30 @@
+R_2=17.54 kohm
+R_1=178.0 kohm
+R_C=9.98 kohm
+R_e=0.989 kohm
+cin=238 nF
+cout=103.0 nF
+ce=100 \muF  10%?
+
+#punto 2b
+R_par=15.33 Kohm
+metodo standard
+V_in+rs=248+340 mvolt +- 8 mv (rumore)
+V_in-sotto_rs=100+184 mvolt +- 6mv
+metodo loro
+V_out+rs=1.10+1.16 volt+-0.1 
+V_out=2.24+2.40 volt +-0.12
+
+#punto 2c
+R_par=9.88 kohm
+V_out=2.24+2.40 volt +-0.12
+V_out+res=1.12+1.20 +- 0.06
+
+#punto 3
+V_in_pp=352+440 mv
+
+#punto 4
+freq=4.634 khz
+
+
+

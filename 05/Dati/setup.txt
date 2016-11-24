@@ -1,0 +1,22 @@
+#1
+R_1=0.989 #kohm
+dV_led=1.97 #volt
+
+#1 dopo bomba
+R_1=551 #ohm
+V_cc=14.92 #volt
+
+#2
+R_3=4.57 #Mohm
+C_1=103.1 #nF
+
+#3
+f=1.03098 #khz
+
+#5
+v_in=2.10 #v
+v_out=5.32 #v
+# r_s_minimo =1.3 #ohm
+
+
+trimmer=227 #ohm

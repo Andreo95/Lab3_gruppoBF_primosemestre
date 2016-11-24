@@ -1,0 +1,6 @@
+# autotico
+# t salita: 66 +- 2 ns
+# t discesa: 62 +- 2 ns
+# ammano
+# t salita: 68 +- 1 ns 
+# t discesa: 62 +- 1 ns

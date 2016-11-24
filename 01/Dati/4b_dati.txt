@@ -1,0 +1,5 @@
+#freq[kHz] semiperiodo[us] dsemiperiodo[us]
+1.559	326	2
+15.09	32.6	0.2
+150.4	3.38	0.02
+1506	0.336	0.002

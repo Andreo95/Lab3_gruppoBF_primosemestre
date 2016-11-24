@@ -1,0 +1,28 @@
+# parte 1
+R1 = 2.27e3	#kohm
+R2 = 22.1e3	#kohm
+Vp = 15.09 	#V
+Vm = -15.17 	#V
+f = 1.03435e3 	#Khz
+
+##punto d 
+R_test = 2.27e3	#kohm
+senza = (5.12, -5.20)	#V 
+con = (2.60, -2.64)	#V
+
+# parte 2
+Vin = .528 - (-.512)	#V
+
+# -3dB
+Vout = 5.96	#V(pp)
+f = 291.99e3	#kHz
+
+# parte 3
+R1 = 214	#ohm
+Vin = .472 - (-.568)	#V
+
+# parte 4/5
+Vin = 2.08	#V(pp)
+R1 = 0.981e3	#kohm
+R2 = 9.87e3	#kohm
+C = 48.7e-9	#nF

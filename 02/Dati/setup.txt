@@ -1,0 +1,25 @@
+#### 1
+
+Rmain = 816	*1e1	#ohm
+Ragg1 = 99.4	*1e1	#ohm
+Ragg2 = 99.5 	*1e1	#ohm
+Rload = 99.7	*1e3	#kohm
+C     = 110	*1e-9	#nF
+
+#### 2
+
+## frequenza ad ampiezza 1/sqrt(2)
+
+freq =  1.88 *1e3 #khz
+dfr  = 0.05
+
+### attenuazione di 2k e 20k Hz
+
+att2  = 10.32/15.28
+att20 = 1.43/14.8
+
+###Passa banda
+R1=3.22		#kOhm
+R2= 3.28	#kOhm
+C1=10.70	#nF
+C2=110.5	#nF

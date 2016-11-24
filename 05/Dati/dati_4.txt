@@ -1,0 +1,15 @@
+f=1020 #hz
+#modo furbo
+r_test=4.70 #Mohm
+dv_senza=2.48 #v
+dv_con=1.184 #v
+
+#modo sonda
+v_prima=2.20 #v
+v_dopo=.808 #v
+
+
+f=10.08 #khz
+dv_senza=2.54 #v
+dv_con=.520 #v
+

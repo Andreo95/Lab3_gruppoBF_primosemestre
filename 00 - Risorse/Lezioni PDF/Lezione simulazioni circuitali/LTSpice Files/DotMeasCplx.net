@@ -1,0 +1,21 @@
+* /Users/forti/Google Drive/Laboratorio 3/2016-17/Lezioni PDF/Lezione simulazioni circuitali/LTSpice Files/DotMeasCplx.asc
+Q1 OUT N002 N003 0 2N3904
+R3 N003 0 1K
+V3 IN 0 AC 1
+R1 0 N002 10K
+C1 N002 IN 1µ
+R2 N002 N001 100K
+V1 N001 0 9
+C2 N003 0 20µ
+R4 N001 OUT 20K
+C3 N002 OUT {C}
+.model NPN NPN
+.model PNP PNP
+.lib /Users/forti/Library/Application Support/LTspice/lib/cmp/standard.bjt
+.ac oct 10 1 10Meg
+.measure tmp max mag(V(out))
+.measure BW trig mag(V(out))=tmp/sqrt(2) rise=1 targ mag(V(out))=tmp/sqrt(2) fall=last
+.measure Vout find V(out) at 1K
+.step oct param C 10p 1n 5
+.backanno
+.end

@@ -1,0 +1,32 @@
+fondoscala 2000
+R1 810 
+R2 1159
+
+2c_d_setup
+R2 1.03 Mohm
+R1 1.518 Mohm
+
+digitale Vin
+analogico Vout
+
+2e_setup
+R3 98.9 Kohm
+R2 220
+R1 560
+digitale come voltmetro
+analogico amperometro
+
+3_setup
+R1 9.89 kohm
+R2 9.88 kohm
+R3 1.03 mohm
+
+new
+R3 0.986 Mohm
+R2 9.91 kohm
+R1 9.90 kohm
+
+3d
+
+0.985 Mohm
+0.560 Mohm
