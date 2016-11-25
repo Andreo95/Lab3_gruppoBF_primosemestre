@@ -1,0 +1,11 @@
+{
+  "projectPath": "D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI",
+  "title": "LaTeX-Plus Project",
+  "root": "07\Relazione\parte1.tex",
+  "program": "pdflatex",
+  "latexmkOptions": "-bibtex -pdf -shell-escape",
+  "output": "./",
+  "openOutput": "true",
+  "postAction": "copy",
+  "postPath": "./"
+}
