@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  23 NOV 2016 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  25 NOV 2016 23:17
 entering extended mode
-**"D:/Valerio/Studies/2-Undergrad/Anno III/Laboratorio 3/07/Relazione/relazione
-_7.tex"
+**"D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI/07/Relazione/relaz
+ione_7.tex"
 
-("D:/Valerio/Studies/2-Undergrad/Anno III/Laboratorio 3/07/Relazione/relazione_
-7.tex"
+("D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI/07/Relazione/relazi
+one_7.tex"
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -622,15 +622,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip60
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
-Package: fixltx2e 2015/06/22 v2.0b fixes to LaTeX (obsolete)
-
-
-Package fixltx2e Warning: fixltx2e is not required with releases after 2015
-(fixltx2e)                All fixes are now in the LaTeX kernel.
-(fixltx2e)                See the latexrelease package for details.
-
-) (C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\mhchem\mhchem.sty
+(C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\mhchem\mhchem.sty
 Package: mhchem 2016/08/07 v4.05 for typesetting chemical formulae
 
 (C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\l3experimental\l3str\l3r
@@ -1217,29 +1209,29 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 (relazione_7.aux)
 \openout1 = `relazione_7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 136.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Info: Redefining \it@ocap on input line 135.
-LaTeX Info: Redefining \it@ccap on input line 135.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Info: Redefining \it@ocap on input line 136.
+LaTeX Info: Redefining \it@ccap on input line 136.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1305,7 +1297,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box92
-Package hyperref Info: Link coloring OFF on input line 135.
+Package hyperref Info: Link coloring OFF on input line 136.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1315,9 +1307,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 135.
-LaTeX Info: Redefining \pageref on input line 135.
-LaTeX Info: Redefining \nameref on input line 135.
+LaTeX Info: Redefining \ref on input line 136.
+LaTeX Info: Redefining \pageref on input line 136.
+LaTeX Info: Redefining \nameref on input line 136.
 
 (relazione_7.out) (relazione_7.out)
 \@outlinefile=\write3
@@ -1326,7 +1318,7 @@ LaTeX Info: Redefining \nameref on input line 135.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 135.
+. Activating mapping `default' on line 136.
 .................................................
 
 (C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\d
@@ -1343,44 +1335,67 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count368
-LaTeX Font Info:    Try loading font information for U+msa on input line 135.
+LaTeX Font Info:    Try loading font information for U+msa on input line 136.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 135.
+LaTeX Font Info:    Try loading font information for U+msb on input line 136.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count369
- (parte1.tex)
-(parte2.tex) (parte3.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
+ (parte1.tex
+<../Figs-Tabs/circ_discr.pdf, id=11, 129.91255pt x 80.66415pt>
+File: ../Figs-Tabs/circ_discr.pdf Graphic file (type pdf)
+
+<use ../Figs-Tabs/circ_discr.pdf>
+Package pdftex.def Info: ../Figs-Tabs/circ_discr.pdf used on input line 8.
+(pdftex.def)             Requested size: 129.91222pt x 80.66394pt.
+
+(C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+<../Figs-Tabs/risposta_normale_1.png, id=14, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/risposta_normale_1.png Graphic file (type png)
+
+<use ../Figs-Tabs/risposta_normale_1.png>
+Package pdftex.def Info: ../Figs-Tabs/risposta_normale_1.png used on input line
+ 16.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+) (parte2.tex) (parte3.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
  [1
 
-{C:/Users/Valerio/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
+{C:/Users/Valerio/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../Figs-T
+abs/circ_discr.pdf>] [2 <../Figs-Tabs/risposta_normale_1.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
  (relazione_7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
 Package rerunfilecheck Info: File `relazione_7.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 00DAC22AD341539561228947D649C852;108.
  ) 
 Here is how much of TeX's memory you used:
- 24717 strings out of 493334
- 458887 string characters out of 3139246
- 678753 words of memory out of 3000000
- 27922 multiletter control sequences out of 15000+200000
- 14125 words of font info for 50 fonts, out of 3000000 for 9000
+ 25243 strings out of 493334
+ 464525 string characters out of 3139246
+ 680694 words of memory out of 3000000
+ 28433 multiletter control sequences out of 15000+200000
+ 18311 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,7n,49p,10470b,731s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,7n,49p,10474b,764s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\ecrm1095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm1200.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on relazione_7.pdf (1 page, 23307 bytes).
+pen\ec\dpi600\ecbx1440.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on relazione_7.pdf (2 pages, 151369 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 27 words of extra memory for PDF output out of 10000 (max. 10000000)
 

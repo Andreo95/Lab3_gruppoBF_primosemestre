@@ -1,6 +1,8 @@
-import Oscillografo
-import os
+import sys, os
+sys.path.append(os.path.join(os.path.realpath('..'), '00 - Risorse', 'Python'))
+folder = os.path.realpath('.')
 from pyan import *
+import Oscillografo
 import numpy as np
 from lab import *
 import matplotlib.pyplot as plt
@@ -11,6 +13,7 @@ folder = os.path.realpath('.')
 datafile="Figs-Tabs\slew_1.csv"
 path=os.path.join(folder, datafile)
 o=Oscillografo.OscilloscopeData(path)
+o.plot()
 
 f=Fitter(o.T2 ,o.CH2, mme(o.T2 , "time", "oscil"), np.ones(len(o.CH2))*o.dCH2)
 fun=createline()
@@ -20,6 +23,3 @@ f.fit(fun)
 Graph.from_fitter(f).draw(fun, resid=True)
 
 plt.show()
-
-
-

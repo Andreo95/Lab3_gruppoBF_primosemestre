@@ -5,15 +5,23 @@ Nel corso dell'esperienza sfrutteremo un OpAmp (TL081) per realizzare circuiti n
 \section{Discriminatore}
 
 \begin{figure}[h]
+	\centering
 	\includegraphics{circ_discr.pdf}
 	\caption{Circuito Discriminatore}
 	\label{f:discr}
 \end{figure}
 
-Si è montato il circuito come in \fig{discr}, inviando segnali sinusoidali in ingresso. La normale risposta del circuito può essere osservata in \fig{discr_normale}: di fatto, il segnale 
+Si è montato il circuito come in \fig{discr}, inviando segnali sinusoidali in ingresso. La normale risposta del circuito può essere osservata in \fig{discr_normale}: di fatto, l'uscita è ad una tensione $\approx V_{CC} \approx \SI{15}{\V}$ quando l'ingresso è a tensione negativa, mentre è a $\approx V_{EE} \approx \SI{-15}{\V}$ quando l'ingresso è a tensione positiva. In realtà, il passaggio dell'output da alto a basso o viceversa avviene quando l'input attraversa una tensione leggermente diversa da 0: questa tensione di offset è stata misurata con l'oscilloscopio come la tensione dell'input nel momento in cui l'output inizia la discesa (o la salita), ottenendo il valore di \SI{31.8(34)}{\mV} (la cui incertezza è primariamente data dalla difficoltà nel riconoscere la contemporaneità delle due tensioni).
+%TODO: magari vedere se dai dati presi per lo slewrate si può risalire al punto... è possibile i guess.
 
 \begin{figure}
+	\centering
 	\includegraphics{risposta_normale_1.png}
 	\caption{Risposta del discriminatore ad un segnale sinusoidale}
 	\label{f:discr_normale}
 \end{figure}
+
+Si è poi incrementata gradualmente la frequenza del segnale in ingresso, osservando la variazione del funzionamento del circuito ad alte frequenze.
+Dapprima, e mantenendo l'ampiezza del segnale in ingresso a qualche volt, si osservano effetti legati allo slew rate finito dell'OpAmp: dal momento che il passaggio dell'output da $V_{CC}$ a $V_{EE}$ non può essere istantaneo, quando l'input ha un semiperiodo confrontabile col tempo richiesto per passare da +15 a \SI{-15}{\V} (che è costante) quest'ultimo diventa una parte sostanziale del periodo dell'output, che dunque si allontana dall'ideale onda quadra per avvicinarsi ad un'onda triangolare con fronti di salita e discesa aventi pendenza data dallo slew rate. %TODO: grafici e fit slewrate
+
+Passando a frequenze di qualche centinaio di \si{\kHz} e riducendo l'ampiezza dell'input si osserva un fenomeno particolare: poiché il guadagno dell'OpAmp a queste frequenze è significativamente inferiore, 
