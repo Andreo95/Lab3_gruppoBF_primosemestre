@@ -1,7 +1,7 @@
 {
   "projectPath": "D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI",
   "title": "LaTeX-Plus Project",
-  "root": "07\Relazione\parte1.tex",
+  "root": "07/Relazione/",
   "program": "pdflatex",
   "latexmkOptions": "-bibtex -pdf -shell-escape",
   "output": "./",
