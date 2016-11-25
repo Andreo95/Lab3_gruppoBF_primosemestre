@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  25 NOV 2016 23:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  26 NOV 2016 00:57
 entering extended mode
 **"D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI/07/Relazione/relaz
 ione_7.tex"
@@ -1350,7 +1350,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: ../Figs-Tabs/circ_discr.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_discr.pdf>
-Package pdftex.def Info: ../Figs-Tabs/circ_discr.pdf used on input line 8.
+Package pdftex.def Info: ../Figs-Tabs/circ_discr.pdf used on input line 9.
 (pdftex.def)             Requested size: 129.91222pt x 80.66394pt.
 
 (C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def
@@ -1361,26 +1361,38 @@ File: ../Figs-Tabs/risposta_normale_1.png Graphic file (type png)
 
 <use ../Figs-Tabs/risposta_normale_1.png>
 Package pdftex.def Info: ../Figs-Tabs/risposta_normale_1.png used on input line
- 16.
+ 19.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<../Figs-Tabs/gbw_1.png, id=17, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/gbw_1.png Graphic file (type png)
+
+<use ../Figs-Tabs/gbw_1.png>
+Package pdftex.def Info: ../Figs-Tabs/gbw_1.png used on input line 31.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (parte2.tex) (parte3.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
  [1
 
 {C:/Users/Valerio/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../Figs-T
-abs/circ_discr.pdf>] [2 <../Figs-Tabs/risposta_normale_1.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
+abs/circ_discr.pdf>] [2 <../Figs-Tabs/risposta_normale_1.png> <../Figs-Tabs/gbw
+_1.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (relazione_7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `relazione_7.out' has not changed.
 (rerunfilecheck)             Checksum: 00DAC22AD341539561228947D649C852;108.
  ) 
 Here is how much of TeX's memory you used:
- 25243 strings out of 493334
- 464525 string characters out of 3139246
- 680694 words of memory out of 3000000
- 28433 multiletter control sequences out of 15000+200000
+ 25250 strings out of 493334
+ 464664 string characters out of 3139246
+ 682694 words of memory out of 3000000
+ 28438 multiletter control sequences out of 15000+200000
  18311 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,7n,49p,10474b,764s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1393,9 +1405,9 @@ fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on relazione_7.pdf (2 pages, 151369 bytes).
+Output written on relazione_7.pdf (2 pages, 181415 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 27 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 32 words of extra memory for PDF output out of 10000 (max. 10000000)
 
