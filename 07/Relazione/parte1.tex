@@ -17,11 +17,18 @@ Si è montato il circuito come in \fig{discr}, inviando segnali sinusoidali in i
 \begin{figure}
 	\centering
 	\includegraphics{risposta_normale_1.png}
-	\caption{Risposta del discriminatore ad un segnale sinusoidale}
+	\caption{Risposta del discriminatore ad un segnale sinusoidale.}
 	\label{f:discr_normale}
 \end{figure}
 
 Si è poi incrementata gradualmente la frequenza del segnale in ingresso, osservando la variazione del funzionamento del circuito ad alte frequenze.
 Dapprima, e mantenendo l'ampiezza del segnale in ingresso a qualche volt, si osservano effetti legati allo slew rate finito dell'OpAmp: dal momento che il passaggio dell'output da $V_{CC}$ a $V_{EE}$ non può essere istantaneo, quando l'input ha un semiperiodo confrontabile col tempo richiesto per passare da +15 a \SI{-15}{\V} (che è costante) quest'ultimo diventa una parte sostanziale del periodo dell'output, che dunque si allontana dall'ideale onda quadra per avvicinarsi ad un'onda triangolare con fronti di salita e discesa aventi pendenza data dallo slew rate. %TODO: grafici e fit slewrate
 
-Passando a frequenze di qualche centinaio di \si{\kHz} e riducendo l'ampiezza dell'input si osserva un fenomeno particolare: poiché il guadagno dell'OpAmp a queste frequenze è significativamente inferiore, 
+Passando a frequenze di qualche centinaio di \si{\kHz} e riducendo l'ampiezza dell'input si osserva un fenomeno particolare: poiché il guadagno dell'OpAmp a queste frequenze è significativamente inferiore, esso raggiunge la saturazione solo per ampiezze dell'input molto maggiori, dunque è apprezzabile per buona parte del periodo la risposta lineare dell'OpAmp, come si può vedere dalla \fig{gbw} (si nota inoltre la diversa relazione tra le fasi di ingresso e uscita rispetto alle basse frequenze, compatibile con il comportamento da circuito a un polo). Ci è però poco chiara la ragione dell'offset dell'output, che non sembra dovuto ad un possibile offset del generatore (poiché permane anche inserendo un condensatore tra questo e l'ingresso invertente dell'OpAmp) né riteniamo sia causato da una $V_{os} \neq 0$. %TODO possibilmente spiegare sta cosa ma nemmeno Forti l'ha capito quindi boh...
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{gbw_1.printing}
+	\caption{Risposta del circuito ad alte frequenze e piccole ampiezze.}
+	\label{f:gbw}
+\end{figure}
