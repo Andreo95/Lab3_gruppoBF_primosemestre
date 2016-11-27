@@ -49,3 +49,16 @@ I valori attesi sono $V_+=-V_-=\frac{V_\gamma +V_z}{1+\frac{R_1}{R_2}}$.  $V_O= 
 \end{figure}
 
 Il ruolo dei diodi zener è quello di limitare l'ampiezza della tensione in uscita in modo simmetrico tra $(V_\gamma + V_z)$ e $-(V_\gamma + V_z)$. Al comtempo si inserisce all'uscita dell'OpAmp la resistenza $R_3$ in modo da limitare la quantità di corrente che fluisce nei diodi zener.
+
+
+Come ci si può aspettare la frequenza i oscillazione non dipende dalla tensione di alimentazione. In effetti il periodo di oscillazione è previsto dalla formula già citata $T=2RC\log\frac{2+\frac{R_1}{R_2}}{\frac{R_1}{R_2}}$, che, appunto, non contiene dipendenze da $V_cc$ e $V_ee$.
+
+
+Per quanto riguarda il comportamento ad alta frequenza si può vedere come l'onda quadra venga sostituita da una onda sinusoidale \ref{f:freqzona}. Questo dovrebbe essere dovuto al comportamento a un polo dell'OpAmp ad alta frequenza, che, attenuando il segnale, causa un abbassamento dell'amplificazione. Ne risulta che l'OpAmp non va più in zona non lineare, ne si raggiunge la tensione di conduzione degli OpAmp(si vede come i due canali, uno su $V_O$, l'altro su $V_+$, siano quasi sovrapposti). 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{astabilefrequenzona.png}
+	\caption{Oscillatore astabile con frequenza di $\SI{220}{\mega\Hz}$}
+	\label{f:freqzona}
+\end{figure}
