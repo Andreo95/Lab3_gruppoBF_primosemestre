@@ -24,8 +24,7 @@ f.fit(fun)
 chiq=sum(fun.resd**2)
 mult=(chiq/len(fun.resd))**0.5
 print("mult={0}".format(mult))
-multmax=(chiq/485)
-multmin=(chiq/390)
+
 multmax=(chiq/485)**0.5 #485 chi-->95%
 multmin=(chiq/390)**0.5 #390 chi -->5%
 
@@ -47,7 +46,6 @@ fun.mask = (o.T2 < 0) & (o.T2 > -1.2e-6)
 f.fit(fun)
 
 g=Graph.from_fitter(f)
-g.title="Slow ratio e discriminatore"
 g.title="Slew ratio e discriminatore"
 g.labelX="tempo [s]"
 g.labelY="tensione [V]"
