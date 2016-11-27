@@ -18,7 +18,7 @@ Fitter._fitter_func = _fitfun #staticmethod(fit_generic_xyerr)
 datafile = 'dati_B_2.txt'
 rawdata = np.loadtxt(os.path.join(folder, 'Dati', datafile)).T
 
-vin = - rawdata[1]
+vin = rawdata[0] - rawdata[1]
 dvin = mme(vin, 'volt', 'oscil')
 tot = 1e-6 * (rawdata[2]) # + rawdata[3])/2
 dt = mme(tot, 'time', 'oscil')
@@ -33,11 +33,11 @@ charge = c_t * vin
 dq = c_t * dvin
 vsh = charge / c_f
 
-def q_rilevata(tot, vth, R):
-	return c_f * vth * np.exp(tot / (R*c_f))
+def q_rilevata(tot, vth):
+	return c_f * vth * np.exp(tot / tau)
 
-q_rilevata.pars = [.2, R_1]
-q_rilevata.deriv = lambda tot, vth, R: 1/(R*c_f) * q_rilevata(tot, vth, R)
+q_rilevata.pars = [.2]
+q_rilevata.deriv = lambda tot, vth: 1/(tau) * q_rilevata(tot, vth)
 
 
 fit_one = Fitter(tot, charge, dt, dq)
