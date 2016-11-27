@@ -46,9 +46,10 @@ fun.mask = (o.T2 < 0) & (o.T2 > -1.2e-6)
 f.fit(fun)
 
 g=Graph.from_fitter(f)
-g.title="Slew ratio e discriminatore"
-g.labelX="tempo [s]"
-g.labelY="tensione [V]"
+g.title="Slew rate discriminatore"
+g.labelX="Tempo [$\mu$s]"
+g.labelY="Tensione [V]"
+g.reX = 1e6
 g.draw(fun, resid=True)
 
 
