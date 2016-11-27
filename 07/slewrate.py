@@ -26,6 +26,8 @@ mult=(chiq/len(fun.resd))**0.5
 print("mult={0}".format(mult))
 multmax=(chiq/485)
 multmin=(chiq/390)
+multmax=(chiq/485)**0.5 #485 chi-->95%
+multmin=(chiq/390)**0.5 #390 chi -->5%
 
 
 f=Fitter(o.T2 ,o.CH2, np.ones(len(o.CH2))*(np.amax(o.T2)-np.amin(o.T2))/5000 , np.ones(len(o.CH2))*mult)
@@ -33,8 +35,20 @@ fun=createline()
 fun.mask = (o.T2 < 0) & (o.T2 > -1.2e-6)
 f.fit(fun)
 
+
+f=Fitter(o.T2 ,o.CH2, np.ones(len(o.CH2))*(np.amax(o.T2)-np.amin(o.T2))/5000 , np.ones(len(o.CH2))*multmax)
+fun=createline()
+fun.mask = (o.T2 < 0) & (o.T2 > -1.2e-6)
+f.fit(fun)
+
+f=Fitter(o.T2 ,o.CH2, np.ones(len(o.CH2))*(np.amax(o.T2)-np.amin(o.T2))/5000 , np.ones(len(o.CH2))*multmin)
+fun=createline()
+fun.mask = (o.T2 < 0) & (o.T2 > -1.2e-6)
+f.fit(fun)
+
 g=Graph.from_fitter(f)
 g.title="Slow ratio e discriminatore"
+g.title="Slew ratio e discriminatore"
 g.labelX="tempo [s]"
 g.labelY="tensione [V]"
 g.draw(fun, resid=True)
