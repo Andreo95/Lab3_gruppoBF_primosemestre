@@ -6,6 +6,8 @@ import Oscillografo
 import numpy as np
 from lab import *
 import matplotlib.pyplot as plt
+import scipy.stats.distributions as dists
+
 Fitter._fitter_func = staticmethod(fit_generic_xyerr)
 
 
@@ -22,14 +24,14 @@ f.fit(fun)
 chiq=sum(fun.resd**2)
 mult=(chiq/len(fun.resd))**0.5
 print("mult={0}".format(mult))
-
+multmax=(chiq/485)
+multmin=(chiq/390)
 
 
 f=Fitter(o.T2 ,o.CH2, np.ones(len(o.CH2))*(np.amax(o.T2)-np.amin(o.T2))/5000 , np.ones(len(o.CH2))*mult)
 fun=createline()
 fun.mask = (o.T2 < 0) & (o.T2 > -1.2e-6)
 f.fit(fun)
-#chiq=sum(fun.resd**2/(np.ones(len(fun.mask))*mult)**2)
 
 g=Graph.from_fitter(f)
 g.title="Slow ratio e discriminatore"

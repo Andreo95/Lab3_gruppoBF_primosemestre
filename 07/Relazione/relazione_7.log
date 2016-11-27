@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.1.31)  27 NOV 2016 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.1.31)  27 NOV 2016 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,29 +1187,29 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) (./relazione_7.aux)
 \openout1 = `relazione_7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 138.
 
 (c:/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Info: Redefining \it@ocap on input line 136.
-LaTeX Info: Redefining \it@ccap on input line 136.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Info: Redefining \it@ocap on input line 138.
+LaTeX Info: Redefining \it@ccap on input line 138.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1277,7 +1277,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box91
-Package hyperref Info: Link coloring OFF on input line 136.
+Package hyperref Info: Link coloring OFF on input line 138.
 
 (c:/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1287,9 +1287,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count364
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 138.
+LaTeX Info: Redefining \pageref on input line 138.
+LaTeX Info: Redefining \nameref on input line 138.
 
 (./relazione_7.out) (./relazione_7.out)
 \@outlinefile=\write3
@@ -1298,7 +1298,7 @@ LaTeX Info: Redefining \nameref on input line 136.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 136.
+. Activating mapping `default' on line 138.
 .................................................
 
 (c:/texlive/2015/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-
@@ -1314,19 +1314,19 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count366
-LaTeX Font Info:    Try loading font information for U+msa on input line 136.
+LaTeX Font Info:    Try loading font information for U+msa on input line 138.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 136.
+LaTeX Font Info:    Try loading font information for U+msb on input line 138.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count367
  (./parte1.tex
-<../Figs-Tabs/circ_discr.pdf, id=16, 129.91255pt x 80.66415pt>
+<../Figs-Tabs/circ_discr.pdf, id=20, 129.91255pt x 80.66415pt>
 File: ../Figs-Tabs/circ_discr.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_discr.pdf>
@@ -1336,7 +1336,7 @@ Package pdftex.def Info: ../Figs-Tabs/circ_discr.pdf used on input line 9.
 (c:/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<../Figs-Tabs/risposta_normale_1.png, id=19, 301.125pt x 225.84375pt>
+<../Figs-Tabs/risposta_normale_1.png, id=23, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/risposta_normale_1.png Graphic file (type png)
 
 <use ../Figs-Tabs/risposta_normale_1.png>
@@ -1348,7 +1348,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
 
  []
 
-<../Figs-Tabs/slewfit.pdf, id=22, 578.16pt x 431.81326pt>
+[1
+
+{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../Figs-Tabs/ci
+rc_discr.pdf>] <../Figs-Tabs/slewfit.pdf, id=66, 578.16pt x 431.81326pt>
 File: ../Figs-Tabs/slewfit.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/slewfit.pdf>
@@ -1362,10 +1365,7 @@ Overfull \hbox (94.46172pt too wide) in paragraph at lines 33--34
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
-
-{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../Figs-Tabs/ci
-rc_discr.pdf>] <../Figs-Tabs/gbw_1.png, id=56, 301.125pt x 225.84375pt>
+<../Figs-Tabs/gbw_1.png, id=68, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/gbw_1.png Graphic file (type png)
 
 <use ../Figs-Tabs/gbw_1.png>
@@ -1375,16 +1375,16 @@ Package pdftex.def Info: ../Figs-Tabs/gbw_1.png used on input line 45.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./parte2.tex [2 <../Figs-Tabs/risposta_normale_1.png>] [3 <../Figs-Tabs/slew
-fit.pdf> <../Figs-Tabs/gbw_1.png>]
-<../Figs-Tabs/circ_schmidt.pdf, id=105, 135.6797pt x 127.8637pt>
+) (./parte_b.tex [2 <../Figs-Tabs/risposta_normale_1.png>] [3 <../Figs-Tabs/sle
+wfit.pdf> <../Figs-Tabs/gbw_1.png>]) (./parte2.tex
+<../Figs-Tabs/circ_schmidt.pdf, id=117, 135.6797pt x 127.8637pt>
 File: ../Figs-Tabs/circ_schmidt.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_schmidt.pdf>
 Package pdftex.def Info: ../Figs-Tabs/circ_schmidt.pdf used on input line 5.
 (pdftex.def)             Requested size: 135.67935pt x 127.86337pt.
 
-<../Figs-Tabs/parteC_sinusoide.png, id=107, 401.5pt x 301.125pt>
+<../Figs-Tabs/parteC_sinusoide.png, id=119, 401.5pt x 301.125pt>
 File: ../Figs-Tabs/parteC_sinusoide.png Graphic file (type png)
 
 <use ../Figs-Tabs/parteC_sinusoide.png>
@@ -1392,7 +1392,7 @@ Package pdftex.def Info: ../Figs-Tabs/parteC_sinusoide.png used on input line 1
 3.
 (pdftex.def)             Requested size: 281.04808pt x 210.78606pt.
 
-<../Figs-Tabs/partec_isteresi.png, id=109, 301.125pt x 225.84375pt>
+<../Figs-Tabs/partec_isteresi.png, id=121, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/partec_isteresi.png Graphic file (type png)
 
 <use ../Figs-Tabs/partec_isteresi.png>
@@ -1406,21 +1406,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/partec_ampiezza_bassa.png, id=112, 301.125pt x 225.84375pt>
+<../Figs-Tabs/partec_ampiezza_bassa.png, id=124, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/partec_ampiezza_bassa.png Graphic file (type png)
 
 <use ../Figs-Tabs/partec_ampiezza_bassa.png>
 Package pdftex.def Info: ../Figs-Tabs/partec_ampiezza_bassa.png used on input l
 ine 47.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [4
 
+ <../Figs-Tabs/circ_schmidt.pdf> <../Figs-Tabs/parteC_sinusoide.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4
-
- <../Figs-Tabs/circ_schmidt.pdf> <../Figs-Tabs/parteC_sinusoide.png>]
-<../Figs-Tabs/slew_rateC.png, id=140, 301.125pt x 225.84375pt>
+<../Figs-Tabs/slew_rateC.png, id=150, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/slew_rateC.png Graphic file (type png)
 
 <use ../Figs-Tabs/slew_rateC.png>
@@ -1431,41 +1430,46 @@ Package pdftex.def Info: ../Figs-Tabs/slew_rateC.png used on input line 56.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./parte3.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
  [5 <../Figs-Tabs/partec_isteresi.png>] [6 <../Figs-Tabs/partec_ampiezza_bassa.
 png> <../Figs-Tabs/slew_rateC.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
  (./relazione_7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `relazione_7.out' has not changed.
-(rerunfilecheck)             Checksum: 6B3B877967126E086908EEE0D4B6FDEC;159.
+(rerunfilecheck)             Checksum: C37E5C69DF1C099255DEB5A9F58B9AA4;217.
  ) 
 Here is how much of TeX's memory you used:
- 25178 strings out of 493054
- 460648 string characters out of 6138327
- 678423 words of memory out of 5000000
- 28341 multiletter control sequences out of 15000+600000
- 20434 words of font info for 64 fonts, out of 8000000 for 9000
+ 25201 strings out of 493054
+ 460870 string characters out of 6138327
+ 679423 words of memory out of 5000000
+ 28352 multiletter control sequences out of 15000+600000
+ 23217 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,17n,49p,10403b,1064s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/tex
 live/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2015/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr6.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2015/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2015/texmf-dist/
-fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2015/texmf-dist/fonts/type
-1/public/cm-super/sfrm1728.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/helv
-etic/uhvr8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on relazione_7.pdf (6 pages, 450471 bytes).
+pe1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr6.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2015/texmf-dist/f
+onts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2015/texmf-dist/fonts/type1
+/public/cm-super/sfrm0600.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/cm
+-super/sfrm0800.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfr
+m0900.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+<c:/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texliv
+e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2015/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2015/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb>
+Output written on relazione_7.pdf (6 pages, 509414 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
