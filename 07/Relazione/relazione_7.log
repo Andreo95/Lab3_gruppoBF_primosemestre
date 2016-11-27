@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  27 NOV 2016 23:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  27 NOV 2016 23:41
 entering extended mode
 **"D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI/07/Relazione/relaz
 ione_7.tex"
@@ -1351,9 +1351,8 @@ Package pdftex.def Info: ../Figs-Tabs/risposta_normale_1.png used on input line
  19.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--30
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
@@ -1363,44 +1362,32 @@ abs/circ_discr.pdf>]
 File: ../Figs-Tabs/slewfit.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/slewfit.pdf>
-Package pdftex.def Info: ../Figs-Tabs/slewfit.pdf used on input line 33.
-(pdftex.def)             Requested size: 649.525pt x 415.55148pt.
-
-Overfull \hbox (165.82813pt too wide) in paragraph at lines 33--34
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Figs-Tabs/gbw_1.png, id=71, 301.125pt x 225.84375pt>
+Package pdftex.def Info: ../Figs-Tabs/slewfit.pdf used on input line 34.
+(pdftex.def)             Requested size: 389.71895pt x 249.33342pt.
+ [2 <../Figs-Tabs/risposta_normale_1.png> <../Figs-Tabs/slewfit.pdf>] <../Figs-
+Tabs/gbw_1.png, id=117, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/gbw_1.png Graphic file (type png)
 
 <use ../Figs-Tabs/gbw_1.png>
-Package pdftex.def Info: ../Figs-Tabs/gbw_1.png used on input line 45.
+Package pdftex.def Info: ../Figs-Tabs/gbw_1.png used on input line 46.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (parte_b.tex [2 <../Figs-Tabs/risposta_normale_1.png>] [3 <../Figs-Tabs/slewf
-it.pdf> <../Figs-Tabs/gbw_1.png>]
-<../Figs-Tabs/charge-detector.pdf, id=125, 276.74712pt x 126.34602pt>
+) (parte_b.tex
+<../Figs-Tabs/charge-detector.pdf, id=118, 276.74712pt x 126.34602pt>
 File: ../Figs-Tabs/charge-detector.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/charge-detector.pdf>
 Package pdftex.def Info: ../Figs-Tabs/charge-detector.pdf used on input line 5.
 
 (pdftex.def)             Requested size: 276.74643pt x 126.3457pt.
-
-<../Figs-Tabs/detector.png, id=128, 301.125pt x 225.84375pt>
+ [3 <../Figs-Tabs/gbw_1.png> <../Figs-Tabs/charge-detector.pdf>]
+<../Figs-Tabs/detector.png, id=146, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/detector.png Graphic file (type png)
 
 <use ../Figs-Tabs/detector.png>
 Package pdftex.def Info: ../Figs-Tabs/detector.png used on input line 28.
 (pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
 
-<../Figs-Tabs/detector_zoom.png, id=129, 301.125pt x 225.84375pt>
+<../Figs-Tabs/detector_zoom.png, id=147, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/detector_zoom.png Graphic file (type png)
 
 <use ../Figs-Tabs/detector_zoom.png>
@@ -1411,18 +1398,17 @@ Overfull \hbox (2.42162pt too wide) in paragraph at lines 26--36
 []$[]$ $[]$ 
  []
 
-[4
-
- <../Figs-Tabs/charge-detector.pdf> <../Figs-Tabs/detector.png> <../Figs-Tabs/d
-etector_zoom.png>]
-<../Figs-Tabs/charge_fit.pdf, id=161, 666.69077pt x 430.0065pt>
+<../Figs-Tabs/charge_fit.pdf, id=150, 666.69077pt x 430.0065pt>
 File: ../Figs-Tabs/charge_fit.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/charge_fit.pdf>
 Package pdftex.def Info: ../Figs-Tabs/charge_fit.pdf used on input line 44.
 (pdftex.def)             Requested size: 400.01755pt x 258.00589pt.
 
-<../Figs-Tabs/oltre_limite.png, id=163, 301.125pt x 225.84375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figs-Tabs/oltre_limite.png, id=152, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/oltre_limite.png Graphic file (type png)
 
 <use ../Figs-Tabs/oltre_limite.png>
@@ -1432,15 +1418,16 @@ Package pdftex.def Info: ../Figs-Tabs/oltre_limite.png used on input line 54.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (parte2.tex [5 <../Figs-Tabs/charge_fit.pdf>]
-<../Figs-Tabs/circ_schmidt.pdf, id=207, 135.6797pt x 127.8637pt>
+) (parte2.tex [4 <../Figs-Tabs/detector.png> <../Figs-Tabs/detector_zoom.png>]
+[5 <../Figs-Tabs/charge_fit.pdf> <../Figs-Tabs/oltre_limite.png>]
+<../Figs-Tabs/circ_schmidt.pdf, id=206, 135.6797pt x 127.8637pt>
 File: ../Figs-Tabs/circ_schmidt.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_schmidt.pdf>
 Package pdftex.def Info: ../Figs-Tabs/circ_schmidt.pdf used on input line 5.
 (pdftex.def)             Requested size: 135.67935pt x 127.86337pt.
 
-<../Figs-Tabs/parteC_sinusoide.png, id=209, 401.5pt x 301.125pt>
+<../Figs-Tabs/parteC_sinusoide.png, id=208, 401.5pt x 301.125pt>
 File: ../Figs-Tabs/parteC_sinusoide.png Graphic file (type png)
 
 <use ../Figs-Tabs/parteC_sinusoide.png>
@@ -1448,10 +1435,7 @@ Package pdftex.def Info: ../Figs-Tabs/parteC_sinusoide.png used on input line 1
 3.
 (pdftex.def)             Requested size: 281.04808pt x 210.78606pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Figs-Tabs/partec_isteresi.png, id=211, 301.125pt x 225.84375pt>
+<../Figs-Tabs/partec_isteresi.png, id=210, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/partec_isteresi.png Graphic file (type png)
 
 <use ../Figs-Tabs/partec_isteresi.png>
@@ -1465,7 +1449,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/partec_ampiezza_bassa.png, id=214, 301.125pt x 225.84375pt>
+<../Figs-Tabs/partec_ampiezza_bassa.png, id=213, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/partec_ampiezza_bassa.png Graphic file (type png)
 
 <use ../Figs-Tabs/partec_ampiezza_bassa.png>
@@ -1476,8 +1460,10 @@ ine 47.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <../Figs-Tabs/oltre_limite.png> <../Figs-Tabs/circ_schmidt.pdf>]
-<../Figs-Tabs/slew_rateC.png, id=239, 301.125pt x 225.84375pt>
+[6
+
+ <../Figs-Tabs/circ_schmidt.pdf> <../Figs-Tabs/parteC_sinusoide.png>]
+<../Figs-Tabs/slew_rateC.png, id=238, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/slew_rateC.png Graphic file (type png)
 
 <use ../Figs-Tabs/slew_rateC.png>
@@ -1487,9 +1473,9 @@ Package pdftex.def Info: ../Figs-Tabs/slew_rateC.png used on input line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (parte3.tex [7 <../Figs-Tabs/parteC_sinusoide.png> <../Figs-Tabs/partec_ister
-esi.png>] [8 <../Figs-Tabs/partec_ampiezza_bassa.png> <../Figs-Tabs/slew_rateC.
-png>] <../Figs-Tabs/circ_astabile.pdf, id=256, 228.1058pt x 161.9354pt>
+) (parte3.tex [7 <../Figs-Tabs/partec_isteresi.png>] [8 <../Figs-Tabs/partec_am
+piezza_bassa.png> <../Figs-Tabs/slew_rateC.png>]
+<../Figs-Tabs/circ_astabile.pdf, id=255, 228.1058pt x 161.9354pt>
 File: ../Figs-Tabs/circ_astabile.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_astabile.pdf>
@@ -1509,7 +1495,7 @@ LaTeX Warning: Reference `misure' on page 9 undefined on input line 23.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/astabile.png, id=259, 301.125pt x 225.84375pt>
+<../Figs-Tabs/astabile.png, id=258, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/astabile.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabile.png>
@@ -1519,7 +1505,7 @@ Package pdftex.def Info: ../Figs-Tabs/astabile.png used on input line 39.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/astabilepiu.png, id=260, 301.125pt x 225.84375pt>
+<../Figs-Tabs/astabilepiu.png, id=259, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/astabilepiu.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabilepiu.png>
@@ -1529,7 +1515,7 @@ Package pdftex.def Info: ../Figs-Tabs/astabilepiu.png used on input line 46.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/astabilefrequenzona.png, id=262, 301.125pt x 225.84375pt>
+<../Figs-Tabs/astabilefrequenzona.png, id=261, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/astabilefrequenzona.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabilefrequenzona.png>
@@ -1541,16 +1527,16 @@ e 61.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
  [9
 
  <../Figs-Tabs/circ_astabile.pdf>] [10 <../Figs-Tabs/astabile.png> <../Figs-Tab
 s/astabilepiu.png>] [11 <../Figs-Tabs/astabilefrequenzona.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
 
 (relazione_7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `relazione_7.out' has not changed.
 (rerunfilecheck)             Checksum: 58FFE2D17B4A17505CBCB8C731200170;280.
 
@@ -1589,9 +1575,9 @@ nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/hel
 vetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
 
-Output written on relazione_7.pdf (11 pages, 693864 bytes).
+Output written on relazione_7.pdf (11 pages, 780926 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
+ 593 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
