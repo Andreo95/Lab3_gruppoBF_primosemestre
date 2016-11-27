@@ -22,7 +22,21 @@ Si è montato il circuito come in \fig{discr}, inviando segnali sinusoidali in i
 \end{figure}
 
 Si è poi incrementata gradualmente la frequenza del segnale in ingresso, osservando la variazione del funzionamento del circuito ad alte frequenze.
-Dapprima, e mantenendo l'ampiezza del segnale in ingresso a qualche volt, si osservano effetti legati allo slew rate finito dell'OpAmp: dal momento che il passaggio dell'output da $V_{CC}$ a $V_{EE}$ non può essere istantaneo, quando l'input ha un semiperiodo confrontabile col tempo richiesto per passare da +15 a \SI{-15}{\V} (che è costante) quest'ultimo diventa una parte sostanziale del periodo dell'output, che dunque si allontana dall'ideale onda quadra per avvicinarsi ad un'onda triangolare con fronti di salita e discesa aventi pendenza data dallo slew rate. %TODO: grafici e fit slewrate
+Dapprima, e mantenendo l'ampiezza del segnale in ingresso a qualche volt, si osservano effetti legati allo slew rate finito dell'OpAmp: dal momento che il passaggio dell'output da $V_{CC}$ a $V_{EE}$ non può essere istantaneo, quando l'input ha un semiperiodo confrontabile col tempo richiesto per passare da +15 a \SI{-15}{\V} (che è costante) quest'ultimo diventa una parte sostanziale del periodo dell'output, che dunque si allontana dall'ideale onda quadra per avvicinarsi ad un'onda triangolare con fronti di salita e discesa aventi pendenza data dallo slew rate.
+Si è dunque proceduto al fit dello slew rate dell'OpAmp. Acquisiti i dati attraverso l'oscilloscopio si è fittatta la retta affine (2 parametri). Per stimare l'errore di digitalizzazione si è fittato il segnale costante \SI{15}{\V} visibile all'inizio del grafico. Imponendo che il chi quadro fosse pari ai gradi di liberà di questo fit, si è così ottenuta una stima dell'errore di digitalizzazione dell'oscilloscopio. Come errore dei tempi si è scelto metà dell'intervallo di campionatura. Si sono dunque fittati i dati nella regione di interesse (fra $0 s$ e $\SI{-1.2e-6}{s}$) si sono ottenuti così i seguenti risultati	(dati e fit nel grafico \ref{f:SLW}):\\
+$SR = \SI{18.771 \pm 0.015}{\V\per\s}$\\
+$q = \SI{-10.286 \pm 0.01}{\V}$\\
+$\chi^2 = 537.07 (598 \dof, p = 0.9645)$\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{slewfit.pdf}
+	\caption{Fit dello slew-rate.}
+	\label{f:SLW}
+\end{figure}
+Si vede come la procedura fornisca comunque un chi quadro non compatibile. Questo è però fisiologico in quanto la misura dell'errore fatta con la tecnica descritta ha essa stessa un errore, e questo errore si riperquote sulla stima del $\chi^2$. Essendo la distribuzione del $\chi^2$ con 598 gradi di libertà abbastanza piccata, è possibile che variando l'errore nel errore sia possibile ottenere un p-value significativo. Non è stata però portata avanti questo tipo di analisi per eccessiva sbatta %sostituire questa frase con qualcosa di più politically correct.
+
+
 
 Passando a frequenze di qualche centinaio di \si{\kHz} e riducendo l'ampiezza dell'input si osserva un fenomeno particolare: poiché il guadagno dell'OpAmp a queste frequenze è significativamente inferiore, esso raggiunge la saturazione solo per ampiezze dell'input molto maggiori, dunque è apprezzabile per buona parte del periodo la risposta lineare dell'OpAmp, come si può vedere dalla \fig{gbw} (si nota inoltre la diversa relazione tra le fasi di ingresso e uscita rispetto alle basse frequenze, compatibile con il comportamento da circuito a un polo). Ci è però poco chiara la ragione dell'offset dell'output, che non sembra dovuto ad un possibile offset del generatore (poiché permane anche inserendo un condensatore tra questo e l'ingresso invertente dell'OpAmp) né riteniamo sia causato da una $V_{os} \neq 0$. %TODO possibilmente spiegare sta cosa ma nemmeno Forti l'ha capito quindi boh...
 
