@@ -30,7 +30,7 @@ c_f = 1.036e-9 #nF
 tau = R_1 * c_f
 
 charge = c_t * vin
-dq = c_t * dvin
+dq = np.sqrt(c_t**2 * dvin**2 + mme(c_t, 'farad')**2 * vin)
 vsh = charge / c_f
 
 def q_rilevata(tot, vth):
@@ -44,6 +44,12 @@ fit_one = Fitter(tot, charge, dt, dq)
 fit_one.fit(q_rilevata)
 
 first = Graph.from_fitter(fit_one)
+first.title = 'Rilevazione di carica'
+first.labelX = 'Time over Threshold [ms]'
+first.labelY = 'Carica immessa [nC]'
+first.reX = 1e3
+first.reY = 1e9
+# first.typeY = 'log'
 first.draw(q_rilevata, resid=True)
 print(q_rilevata.cov)
 

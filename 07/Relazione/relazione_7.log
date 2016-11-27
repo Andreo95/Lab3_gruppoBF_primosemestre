@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.1.31)  27 NOV 2016 22:48
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  27 NOV 2016 22:31
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1113,6 +1117,7 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 (c:/texlive/2015/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
+<<<<<<< Updated upstream
 (c:/texlive/2015/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
@@ -1131,15 +1136,42 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@hangindent=\dimen280
 )
 \c@ContinuedFloat=\count345
+=======
+(C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+\wrapoverhang=\dimen274
+\WF@size=\dimen275
+\c@WF@wrappedlines=\count345
+\WF@box=\box90
+\WF@everypar=\toks37
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen276
+\captionmargin@=\dimen277
+\captionwidth=\dimen278
+\caption@tempdima=\dimen279
+\caption@indent=\dimen280
+\caption@parindent=\dimen281
+\caption@hangindent=\dimen282
+)
+\c@ContinuedFloat=\count346
+>>>>>>> Stashed changes
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
 )
-\c@KVtest=\count346
-\sf@farskip=\skip83
-\sf@captopadj=\dimen281
-\sf@capskip=\skip84
-\sf@nearskip=\skip85
+(C:\Users\Valerio\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count347
+<<<<<<< Updated upstream
 \c@subfigure@save=\count348
 \c@lofdepth=\count349
 \c@subtable=\count350
@@ -1158,9 +1190,21 @@ Package: wrapfig 2003/01/31  v 3.6
 )
 (c:/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen284
+=======
+\c@subtable=\count348
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+Package: multirow 2016/10/11 v2.1 Span multiple rows of a table
+\multirow@colwidth=\skip83
+\multirow@cnta=\count349
+\multirow@cntb=\count350
+\multirow@dima=\skip84
+\bigstrutjot=\dimen283
+>>>>>>> Stashed changes
 )
 (c:/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
+<<<<<<< Updated upstream
 \heavyrulewidth=\dimen285
 \lightrulewidth=\dimen286
 \cmidrulewidth=\dimen287
@@ -1178,6 +1222,25 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisruleclass=\count356
 \@lastruleclass=\count357
 \@thisrulewidth=\dimen297
+=======
+\heavyrulewidth=\dimen284
+\lightrulewidth=\dimen285
+\cmidrulewidth=\dimen286
+\belowrulesep=\dimen287
+\belowbottomsep=\dimen288
+\aboverulesep=\dimen289
+\abovetopsep=\dimen290
+\cmidrulesep=\dimen291
+\cmidrulekern=\dimen292
+\defaultaddspace=\dimen293
+\@cmidla=\count351
+\@cmidlb=\count352
+\@aboverulesep=\dimen294
+\@belowrulesep=\dimen295
+\@thisruleclass=\count353
+\@lastruleclass=\count354
+\@thisrulewidth=\dimen296
+>>>>>>> Stashed changes
 )
 (c:/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1187,29 +1250,29 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) (./relazione_7.aux)
 \openout1 = `relazione_7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 140.
 
 (c:/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Info: Redefining \it@ocap on input line 138.
-LaTeX Info: Redefining \it@ccap on input line 138.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Info: Redefining \it@ocap on input line 140.
+LaTeX Info: Redefining \it@ccap on input line 140.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1250,6 +1313,7 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (c:/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
+<<<<<<< Updated upstream
 \scratchcounter=\count358
 \scratchdimen=\dimen298
 \scratchbox=\box90
@@ -1260,6 +1324,18 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 \MPscratchDim=\dimen299
 \MPnumerator=\count362
 \makeMPintoPDFobject=\count363
+=======
+\scratchcounter=\count355
+\scratchdimen=\dimen297
+\scratchbox=\box91
+\nofMPsegments=\count356
+\nofMParguments=\count357
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count358
+\MPscratchDim=\dimen298
+\MPnumerator=\count359
+\makeMPintoPDFobject=\count360
+>>>>>>> Stashed changes
 \everyMPtoPDFconversion=\toks39
 ) (c:/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1270,6 +1346,7 @@ Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
+<<<<<<< Updated upstream
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
 (c:/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -1278,6 +1355,12 @@ e
 ))
 \AtBeginShipoutBox=\box91
 Package hyperref Info: Link coloring OFF on input line 138.
+=======
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\AtBeginShipoutBox=\box92
+Package hyperref Info: Link coloring OFF on input line 140.
+>>>>>>> Stashed changes
 
 (c:/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1285,11 +1368,15 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
+<<<<<<< Updated upstream
 \c@section@level=\count364
+=======
+\c@section@level=\count361
+>>>>>>> Stashed changes
 )
-LaTeX Info: Redefining \ref on input line 138.
-LaTeX Info: Redefining \pageref on input line 138.
-LaTeX Info: Redefining \nameref on input line 138.
+LaTeX Info: Redefining \ref on input line 140.
+LaTeX Info: Redefining \pageref on input line 140.
+LaTeX Info: Redefining \nameref on input line 140.
 
 (./relazione_7.out) (./relazione_7.out)
 \@outlinefile=\write3
@@ -1298,7 +1385,7 @@ LaTeX Info: Redefining \nameref on input line 138.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 138.
+. Activating mapping `default' on line 140.
 .................................................
 
 (c:/texlive/2015/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-
@@ -1308,25 +1395,39 @@ Dictionary: translator-basic-dictionary, Language: English
 (c:/texlive/2015/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2016/01/19 v2.6p siunitx: Abbreviated units
 )
+<<<<<<< Updated upstream
 \c@lstlisting=\count365
+=======
+\c@lstlisting=\count362
+>>>>>>> Stashed changes
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+<<<<<<< Updated upstream
 \c__siunitx_mathsf_int=\count366
 LaTeX Font Info:    Try loading font information for U+msa on input line 138.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+=======
+\c__siunitx_mathsf_int=\count363
+LaTeX Font Info:    Try loading font information for U+msa on input line 140.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+>>>>>>> Stashed changes
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 138.
+LaTeX Font Info:    Try loading font information for U+msb on input line 140.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<<<<<<< Updated upstream
 \c__siunitx_mathtt_int=\count367
  (./parte1.tex
 <../Figs-Tabs/circ_discr.pdf, id=24, 129.91255pt x 80.66415pt>
+=======
+\c__siunitx_mathtt_int=\count364
+ (parte1.tex
+<../Figs-Tabs/circ_discr.pdf, id=23, 129.91255pt x 80.66415pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/circ_discr.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_discr.pdf>
@@ -1385,6 +1486,7 @@ Package pdftex.def Info: ../Figs-Tabs/charge-detector.pdf used on input line 5.
 
 (pdftex.def)             Requested size: 276.74643pt x 126.3457pt.
 
+<<<<<<< Updated upstream
 <../Figs-Tabs/detector.png, id=129, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/detector.png Graphic file (type png)
 
@@ -1393,6 +1495,34 @@ Package pdftex.def Info: ../Figs-Tabs/detector.png used on input line 16.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 ) (./parte2.tex
 <../Figs-Tabs/circ_schmidt.pdf, id=130, 135.6797pt x 127.8637pt>
+=======
+
+Package caption Warning: \label without proper reference on input line 36.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `f:det_norm' on page 4 undefined on input line 23.
+
+<../Figs-Tabs/detector.png, id=128, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/detector.png Graphic file (type png)
+
+<use ../Figs-Tabs/detector.png>
+Package pdftex.def Info: ../Figs-Tabs/detector.png used on input line 28.
+(pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
+
+<../Figs-Tabs/detector_zoom.png, id=129, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/detector_zoom.png Graphic file (type png)
+
+<use ../Figs-Tabs/detector_zoom.png>
+Package pdftex.def Info: ../Figs-Tabs/detector_zoom.png used on input line 33.
+(pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
+
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 26--37
+[]$[]$ $[]$
+ []
+
+) (parte2.tex <../Figs-Tabs/circ_schmidt.pdf, id=130, 135.6797pt x 127.8637pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/circ_schmidt.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_schmidt.pdf>
@@ -1411,8 +1541,14 @@ Package pdftex.def Info: ../Figs-Tabs/parteC_sinusoide.png used on input line 1
 (pdftex.def)             Requested size: 281.04808pt x 210.78606pt.
  [4
 
+<<<<<<< Updated upstream
  <../Figs-Tabs/charge-detector.pdf> <../Figs-Tabs/detector.png>]
 <../Figs-Tabs/partec_isteresi.png, id=161, 301.125pt x 225.84375pt>
+=======
+ <../Figs-Tabs/charge-detector.pdf> <../Figs-Tabs/detector.png> <../Figs-Tabs/d
+etector_zoom.png>]
+<../Figs-Tabs/partec_isteresi.png, id=166, 301.125pt x 225.84375pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/partec_isteresi.png Graphic file (type png)
 
 <use ../Figs-Tabs/partec_isteresi.png>
@@ -1423,7 +1559,11 @@ Package pdftex.def Info: ../Figs-Tabs/partec_isteresi.png used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<<<<<<< Updated upstream
 <../Figs-Tabs/partec_ampiezza_bassa.png, id=164, 301.125pt x 225.84375pt>
+=======
+<../Figs-Tabs/partec_ampiezza_bassa.png, id=169, 301.125pt x 225.84375pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/partec_ampiezza_bassa.png Graphic file (type png)
 
 <use ../Figs-Tabs/partec_ampiezza_bassa.png>
@@ -1431,7 +1571,11 @@ Package pdftex.def Info: ../Figs-Tabs/partec_ampiezza_bassa.png used on input l
 ine 47.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
  [5 <../Figs-Tabs/circ_schmidt.pdf> <../Figs-Tabs/parteC_sinusoide.png>]
+<<<<<<< Updated upstream
 <../Figs-Tabs/slew_rateC.png, id=188, 301.125pt x 225.84375pt>
+=======
+<../Figs-Tabs/slew_rateC.png, id=193, 301.125pt x 225.84375pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/slew_rateC.png Graphic file (type png)
 
 <use ../Figs-Tabs/slew_rateC.png>
@@ -1441,9 +1585,15 @@ Package pdftex.def Info: ../Figs-Tabs/slew_rateC.png used on input line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<<<<<<< Updated upstream
 ) (./parte3.tex [6 <../Figs-Tabs/partec_isteresi.png> <../Figs-Tabs/partec_ampi
 ezza_bassa.png>]
 <../Figs-Tabs/circ_astabile.pdf, id=200, 228.1058pt x 161.9354pt>
+=======
+) (parte3.tex [6 <../Figs-Tabs/partec_isteresi.png> <../Figs-Tabs/partec_ampiez
+za_bassa.png>]
+<../Figs-Tabs/circ_astabile.pdf, id=204, 228.1058pt x 161.9354pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/circ_astabile.pdf Graphic file (type pdf)
 
 <use ../Figs-Tabs/circ_astabile.pdf>
@@ -1463,7 +1613,11 @@ LaTeX Warning: Reference `misure' on page 7 undefined on input line 23.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<<<<<<< Updated upstream
 <../Figs-Tabs/astabile.png, id=203, 301.125pt x 225.84375pt>
+=======
+<../Figs-Tabs/astabile.png, id=207, 301.125pt x 225.84375pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/astabile.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabile.png>
@@ -1473,7 +1627,11 @@ Package pdftex.def Info: ../Figs-Tabs/astabile.png used on input line 39.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<<<<<<< Updated upstream
 <../Figs-Tabs/astabilepiu.png, id=204, 301.125pt x 225.84375pt>
+=======
+<../Figs-Tabs/astabilepiu.png, id=208, 301.125pt x 225.84375pt>
+>>>>>>> Stashed changes
 File: ../Figs-Tabs/astabilepiu.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabilepiu.png>
@@ -1496,6 +1654,7 @@ e 61.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
+<<<<<<< Updated upstream
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
  [8] [9 <../Figs-Tabs/astabile.png> <../Figs-Tabs/astabilepiu.png>] [10 <../Fig
 s-Tabs/astabilefrequenzona.png>]
@@ -1503,6 +1662,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (./relazione_7.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+=======
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+ [7 <../Figs-Tabs/slew_rateC.png> <../Figs-Tabs/circ_astabile.pdf>] [8 <../Figs
+-Tabs/astabile.png> <../Figs-Tabs/astabilepiu.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+ (relazione_7.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
+>>>>>>> Stashed changes
 Package rerunfilecheck Info: File `relazione_7.out' has not changed.
 (rerunfilecheck)             Checksum: 11EE53B1D2825CFC9C51E456DCC14E1E;275.
 
@@ -1514,6 +1682,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< Updated upstream
  25259 strings out of 493054
  462135 string characters out of 6138327
  679423 words of memory out of 5000000
@@ -1546,5 +1715,41 @@ PDF statistics:
  322 PDF objects out of 1000 (max. 8388607)
  217 compressed objects within 3 object streams
  35 named destinations out of 1000 (max. 500000)
+=======
+ 25305 strings out of 493334
+ 466069 string characters out of 3139246
+ 683805 words of memory out of 3000000
+ 28441 multiletter control sequences out of 15000+200000
+ 26758 words of font info for 84 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,22n,50p,10474b,1062s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\tcrm1095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecrm1000.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Valerio\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Valeri
+o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\
+Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
+095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecbx1440.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
+r8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on relazione_7.pdf (8 pages, 639132 bytes).
+PDF statistics:
+ 532 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+>>>>>>> Stashed changes
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
