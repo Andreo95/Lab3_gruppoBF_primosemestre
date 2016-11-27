@@ -38,7 +38,7 @@ def q_rilevata(tot, vth):
 
 q_rilevata.pars = [.2]
 q_rilevata.deriv = lambda tot, vth: 1/(tau) * q_rilevata(tot, vth)
-
+# q_rilevata.mask = tot > 1e-4
 
 fit_one = Fitter(tot, charge, dt, dq)
 fit_one.fit(q_rilevata)
