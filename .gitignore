@@ -21,6 +21,8 @@ $RECYCLE.BIN/
 *.aux
 *.out
 *.log
+*.gz
+Relazione*.pdf
 
 # =========================
 # Operating System Files
