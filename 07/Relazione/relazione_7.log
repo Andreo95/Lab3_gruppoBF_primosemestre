@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  28 NOV 2016 01:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.10.1)  28 NOV 2016 01:16
 entering extended mode
 **"D:/Valerio/Studies/2-Undergrad/Anno III/laboratorio3_semI/07/Relazione/relaz
 ione_7.tex"
@@ -1482,12 +1482,9 @@ Package pdftex.def Info: ../Figs-Tabs/circ_astabile.pdf used on input line 4.
 (pdftex.def)             Requested size: 228.10524pt x 161.93498pt.
 
 
-LaTeX Warning: Reference `f:stabile' on page 9 undefined on input line 23.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/astabile.png, id=260, 301.125pt x 225.84375pt>
+<../Figs-Tabs/astabile.png, id=262, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/astabile.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabile.png>
@@ -1497,7 +1494,7 @@ Package pdftex.def Info: ../Figs-Tabs/astabile.png used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/astabilepiu.png, id=261, 301.125pt x 225.84375pt>
+<../Figs-Tabs/astabilepiu.png, id=263, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/astabilepiu.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabilepiu.png>
@@ -1507,12 +1504,47 @@ Package pdftex.def Info: ../Figs-Tabs/astabilepiu.png used on input line 48.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figs-Tabs/astabilefrequenzona.png, id=263, 301.125pt x 225.84375pt>
+<../Figs-Tabs/parted_vibratore_out_V-.png, id=264, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/parted_vibratore_out_V-.png Graphic file (type png)
+
+<use ../Figs-Tabs/parted_vibratore_out_V-.png>
+Package pdftex.def Info: ../Figs-Tabs/parted_vibratore_out_V-.png used on input
+ line 55.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figs-Tabs/astabilefrequenzona.png, id=268, 301.125pt x 225.84375pt>
 File: ../Figs-Tabs/astabilefrequenzona.png Graphic file (type png)
 
 <use ../Figs-Tabs/astabilefrequenzona.png>
 Package pdftex.def Info: ../Figs-Tabs/astabilefrequenzona.png used on input lin
-e 63.
+e 70.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [9
+
+ <../Figs-Tabs/circ_astabile.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figs-Tabs/astabileduecapacita.png, id=297, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/astabileduecapacita.png Graphic file (type png)
+
+<use ../Figs-Tabs/astabileduecapacita.png>
+Package pdftex.def Info: ../Figs-Tabs/astabileduecapacita.png used on input lin
+e 77.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figs-Tabs/astabileslewrate.png, id=298, 301.125pt x 225.84375pt>
+File: ../Figs-Tabs/astabileslewrate.png Graphic file (type png)
+
+<use ../Figs-Tabs/astabileslewrate.png>
+Package pdftex.def Info: ../Figs-Tabs/astabileslewrate.png used on input line 8
+4.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
 
@@ -1520,56 +1552,48 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
- [9
-
- <../Figs-Tabs/circ_astabile.pdf>] [10 <../Figs-Tabs/astabile.png> <../Figs-Tab
-s/astabilepiu.png>] [11 <../Figs-Tabs/astabilefrequenzona.png>]
+ [10 <../Figs-Tabs/astabile.png>] [11 <../Figs-Tabs/astabilepiu.png> <../Figs-T
+abs/parted_vibratore_out_V-.png>] [12 <../Figs-Tabs/astabilefrequenzona.png> <.
+./Figs-Tabs/astabileduecapacita.png>] [13 <../Figs-Tabs/astabileslewrate.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
-
 (relazione_7.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `relazione_7.out' has not changed.
 (rerunfilecheck)             Checksum: 58FFE2D17B4A17505CBCB8C731200170;280.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 25318 strings out of 493334
- 466509 string characters out of 3139246
- 683805 words of memory out of 3000000
- 28445 multiletter control sequences out of 15000+200000
- 24763 words of font info for 75 fonts, out of 3000000 for 9000
+ 25338 strings out of 493334
+ 467139 string characters out of 3139246
+ 684805 words of memory out of 3000000
+ 28458 multiletter control sequences out of 15000+200000
+ 23980 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,22n,50p,10474b,1062s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx1095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\tcrm1095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Valerio\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Valeri
-o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\
-Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
-095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx1440.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/hel
-vetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-
-Output written on relazione_7.pdf (11 pages, 716891 bytes).
+0\tcrm1095.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecrm1000.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Valerio\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Valeri
+o\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\
+Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1
+440.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecrm1200.pk> <C:\Users\Valerio\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on relazione_7.pdf (13 pages, 755476 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 614 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
