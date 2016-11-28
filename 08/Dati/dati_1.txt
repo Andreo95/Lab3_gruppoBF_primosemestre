@@ -1,2 +1,3 @@
-#VA+[V]	VA-[V]	DT[\mu\s]
+#freq[Hz]	VA+[mV]	VA-[mV]	DT[\mu\s]
+1.9781e3	264	-256	11.4
 
