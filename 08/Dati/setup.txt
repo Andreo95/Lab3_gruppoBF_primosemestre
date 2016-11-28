@@ -9,3 +9,11 @@ C_2=10.11 #nF
 
 #punto 1
 V_in=256 -(-268) #mV
+
+#punto 3
+freq_oscil=1.6000e3 #hz
+
+#punto 4
+freq=1.5996e3 #hz
+Vout=.776-(-.752) #V
+Vin=.256-(-.268) #V
