@@ -37,14 +37,13 @@ for filename in os.listdir(csvdata):
 	f = Fitter(o.T1, o.CH1, np.ones(len(o.CH1))*mme(np.amax(o.T1)-np.amin(o.T1), 'time', 'oscil'), np.ones(len(o.CH2))*o.dCH1)
 	f.fit(fun, verbose=False)
 	results2.append(fun.pars)
-	deltaphi = (results2[-1][1] - results1[-1][1])
 
-	print(freq, 'Hz:\nCH1:', np.amax(o.CH1), np.amin(o.CH1), '\nCH2:', np.amax(o.CH2), np.amax(o.CH2), '\ndeltaphi:', deltaphi)
+results2 = np.array(results2)
+results1 = np.array(results1)
 
-	#g = Graph.from_fitter(f)
-	#g.draw(fun, resid = True)
+phase = results1[:,1] - results2[:,1]
+freqs = (results1[:,0] + results2[:,0])/4/np.pi
+gain = 20*np.log10(np.abs(results1[:,2] / results2[:,2]))
 
-
-	#plt.show()
-
-#plt.show()
+# sorter = np.argsort(freqs)
+# freqs, phase, gain = np.array([freqs, phase, gain])[:,sorter]
