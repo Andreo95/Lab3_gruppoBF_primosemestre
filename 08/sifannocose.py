@@ -41,6 +41,7 @@ def ampligain(pot, x, rdiodes='ignore'):
 
 def beth(f):
 	# attenuazione della rete di feedback (di wien)
+	# OCCHIO: è complessa, ci sarà da prenderne modulo e argomento...
 	w = 2*np.pi*f
 	ws = 1/(R_1 * C_1)
 	wp = 1/(R_2 * C_2)
