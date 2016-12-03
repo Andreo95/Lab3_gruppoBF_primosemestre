@@ -8,18 +8,27 @@ from lab import *
 import re
 
 debug=False
+reg=re.compile(r"(?P<nome>[\w]+\s?[\w]*),(?P<dato>[\w\+\-\.]+)")
+reg2=re.compile(r"(?P<nome>[\w]+\s?[\w]*),(?P<dato>[\w\+\-\.]+[\.*,\.*])+[,\n]")
 
+def tryparse(s):
+    try:
+        return float(s)
+    except:
+        print("string \"", s, "\" is not a float, is it?")
+        return s
 
 class OscilloscopeData():
 
-    def __init__(self,filename, verbose=True, graphicose=True):
+    def __init__(self,filename, verbose=True, graphicose=True, getall=False):
         self.source=filename
         file=open(filename)
         t1=[]
         t2=[]
         ch1=[]
         ch2=[]
-        self.params={}
+        self.CH1params={}
+        self.CH2params={}
         for l in file.readlines():
             try:
                 w=re.findall(r"[\+\-\w\.]+",l)
@@ -30,13 +39,16 @@ class OscilloscopeData():
                 if debug:
                     print("Trovata roba in ", l, " --->", (w[0], float(w[1]), float(w[2]), float(w[3])))
             except:
-                pass #TODO: prendere il resto delle informazioni...
-                #print("datino")
-                # k=re.findall(r"[\w.\s.\+.\-]+", l)
-                # try:
-                    # self.params[k[0]+"_ch1"]=[]
-                    # for i in range(1, len(k)):# pass
-                # print(k)
+              #  print("datino")
+                if(getall):
+                    k=reg.findall(l)
+                    print(k)
+                    for i in k:
+                        if(i[0] in self.CH1params):
+                            self.CH2params[i[0]]=i[1]#tryparse(i[1])
+                        else:
+                            self.CH1params[i[0]]=i[1]#tryparse(i[1])
+
         self.T1=np.array(t1)
         self.T2=np.array(t2)
         self.CH1=np.array(ch1)
