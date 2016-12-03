@@ -14,7 +14,7 @@ per i componenti sono riportati in \tab{comp_mis}.
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{S S S S S S S}
+	\begin{tabular}{ *{5}{S[table-figures-decimal=2]} *{2}{S[table-figures-decimal=1, table-figures-uncertainty=1]} }
 		{$R_1$ [\si{\kohm}]} & {$R_2$ [\si{\kohm}]}	& {$R_3$ [\si{\kohm}]} & {$R_4$ [\si{\kohm}]} & {$R_5$ [\si{\kohm}]}
 			& {$C_1$ [\si{\nano\farad}]} & {$C_2$ [\si{\nano\farad}]} \\
 		\midrule
@@ -33,6 +33,7 @@ che, riportato all'ingresso non invertente dell'OpAmp, rende il circuito un osci
 
 Intendiamo innanzitutto misuare il guadagno della rete di feedback di Wien: abbiamo dunque collegato l'ingresso
 non invertente dell'OpAmp al generatore d'onda e inviato un sengale sinusoidale di ampiezza picco-picco $\approx \SI{500}{\mV}$
-a varie frequenze comprese tra 500 e \SI{3000}{\Hz}, misurando il segnale in uscita al punto A del circuito.
+a varie frequenze comprese tra \SIrange[range-phrase = \text{ e }]{500}{3000}{\Hz},
+misurando il segnale in uscita al punto A del circuito.
 
 % TODO: spiegare i dati e fittare! perché betaA con fase di pi??
