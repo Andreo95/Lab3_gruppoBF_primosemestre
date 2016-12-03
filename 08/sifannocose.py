@@ -11,6 +11,8 @@ import re
 
 Fitter._fitter_func = staticmethod(fit_generic_xyerr)
 
+## cose
+
 def newsine():
 	def sinewave(t, w, phi, V0, C):
 		return V0*np.sin(w*t+phi) + C
@@ -19,6 +21,36 @@ def newsine():
 
 myreg = re.compile("parte1_(?P<freq>[0-9]+).csv")
 csvdata = os.path.join(folder, "Dati", "parte1")
+
+R_1 = 9.95e3 #kohm
+R_2 = 0.94e3
+R_3 = 9.90e3
+R_4 = 9.94e3
+R_5 = 9.90e3
+C_1 = 10.81e-9 #nF
+C_2 = 10.11e-9 #nF
+
+def ampligain(pot, x, rdiodes='ignore'):
+	# guadagno dell'opamp come ampli non invertente
+	if rdiodes == 'ignore':
+		R_d = R_3
+	else:
+		R_d = rdiodes
+	return 1 + (R_4 + R_d + (1-x)*pot) / (R_5 + x*pot)
+
+
+def beth(f):
+	# attenuazione della rete di feedback (di wien)
+	# OCCHIO: è complessa, ci sarà da prenderne modulo e argomento...
+	w = 2*np.pi*f
+	ws = 1/(R_1 * C_1)
+	wp = 1/(R_2 * C_2)
+	invb = 1 + R_1/R_2 * (1 + ws/wp + 1j*(w/wp - ws/w))
+	return 1/invb
+
+
+
+## lettura
 
 results = []
 
@@ -64,8 +96,12 @@ freqs, dfreqs = results[0:2]
 phase, dphase = results[2:4]
 gain, dgain = results[4:6]
 
+## graphing
+
 sfasamento = Graph(freqs, phase, dfreqs, dphase)
+sfasamento.typeX = 'log'
 aperbeta = Graph(freqs, gain, dfreqs, dgain)
+aperbeta.typeX = 'log'
 
 sfasamento.draw()
 aperbeta.draw()
