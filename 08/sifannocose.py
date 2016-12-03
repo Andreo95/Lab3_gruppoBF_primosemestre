@@ -23,7 +23,7 @@ myreg = re.compile("parte1_(?P<freq>[0-9]+).csv")
 csvdata = os.path.join(folder, "Dati", "parte1")
 
 R_1 = 9.95e3 #kohm
-R_2 = 0.94e3
+R_2 = 9.94e3#0.94e3
 R_3 = 9.90e3
 R_4 = 9.94e3
 R_5 = 9.90e3
@@ -48,6 +48,8 @@ def beth(f):
 	invb = 1 + R_1/R_2 * (1 + ws/wp + 1j*(w/wp - ws/w))
 	return 1/invb
 
+def agg(x):
+	return x+(2*(x<0)-1)*np.pi
 
 
 ## lettura
@@ -83,9 +85,11 @@ for filename in os.listdir(csvdata):
 
 	phase = vout.pars[1] - vin.pars[1]
 	dphase = np.sqrt(vout.sigmas[1]**2 + vin.sigmas[1]**2)
-	Av = 20 * np.log10(vout.pars[2] / vin.pars[2])
-	dAv = 20 * np.log10(np.e) * np.sqrt(vout.sigmas[2]**2 / vout.pars[2]**2 + vin.sigmas[2]**2 / vin.pars[2]**2)
-	avgf = (vout.pars[0]/vout.sigmas[0]**2 + vin.pars[0]/vin.sigmas[0]**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
+	#Av = 20 * np.log10(vout.pars[2] / vin.pars[2])
+	#dAv = 20 * np.log10(np.e) * np.sqrt(vout.sigmas[2]**2 / vout.pars[2]**2 + vin.sigmas[2]**2 / vin.pars[2]**2)
+	Av=vout.pars[2]/vin.pars[2]
+	dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5 
+	avgf = 1e-4*(vout.pars[0]/vout.sigmas[0]**2 + (vin.pars[0]/vin.sigmas[0])**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
 	df = 1 / np.sqrt(vout.sigmas[0]**-2 + vin.sigmas[0]**-2) / (2*np.pi)
 
 	results.append((avgf, df, phase, dphase, Av, dAv))
@@ -94,19 +98,39 @@ results = np.array(results).T
 
 freqs, dfreqs = results[0:2]
 phase, dphase = results[2:4]
+phase=agg(phase)
 gain, dgain = results[4:6]
 
 ## graphing
 
 sfasamento = Graph(freqs, phase, dfreqs, dphase)
 sfasamento.typeX = 'log'
+sfasamento.title="Frequenza vs fase"
 aperbeta = Graph(freqs, gain, dfreqs, dgain)
 aperbeta.typeX = 'log'
+
+aperbeta.title="Frequenza vs guadagno"
 
 sfasamento.draw()
 aperbeta.draw()
 
+#plt.show()
+
+## fits
+
+def amplificazione(f, pot, x, diodes):
+	x=beth(f)*ampligain(pot, x, diodes)
+	return np.absolute(x)
+
+amplificazione.pars=[5500, 0.1, 10000]
+fitt = Fitter(freqs, gain, dfreqs, dgain) 
+fitt.fit(amplificazione)
+terzo = Graph.from_fitter(fitt)
+terzo.typeX = 'log'
+terzo.title="Fit"
+terzo.draw(amplificazione)
 plt.show()
+
 
 # sorter = np.argsort(freqs)
 # freqs, phase, gain = np.array([freqs, phase, gain])[:,sorter]
