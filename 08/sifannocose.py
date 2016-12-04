@@ -8,6 +8,7 @@ import Oscillografo
 import matplotlib.pyplot as plt
 import scipy.stats.distributions as dists
 import re
+from solvers import *
 
 Fitter._fitter_func = staticmethod(fit_generic_xyerr)
 
@@ -39,23 +40,23 @@ def ampligain(pot, x, rdiodes='ignore'):
 	return 1 + (R_4 + R_d + (1-x)*pot) / (R_5 + x*pot)
 
 
-def beth(f):
+def beth(f, uno, due):
 	# attenuazione della rete di feedback (di wien)
 	# OCCHIO: è complessa, ci sarà da prenderne modulo e argomento...
+	c1 = C_1 * uno
+	c2 = C_2 * due
 	w = 2*np.pi*f
-	ws = 1/(R_1 * C_1)
-	wp = 1/(R_2 * C_2)
+	ws = 1/(R_1 * c1)
+	wp = 1/(R_2 * c2)
 	invb = 1 + R_1/R_2 * (1 + ws/wp + 1j*(w/wp - ws/w))
 	return 1/invb
 
-def par(R1, R2):
-	return (R1*R2)/(R1+R2)
 
 def beth1(f):
 	w=2*np.pi*f
 	RC_1=1j/(C_1*w)
 	RC_2=1j/(C_2*w)
-	para=par(R_2, RC_2)
+	para=parallel(R_2, RC_2)
 	return para/(para+RC_1+R_1)
 
 
@@ -93,7 +94,7 @@ for filename in os.listdir(csvdata):
 			vin.pars[1] -= np.pi
 		else:
 			vin.pars[1] += np.pi
-	
+
 	phase = vout.pars[1] - vin.pars[1]
 	dphase = np.sqrt(vout.sigmas[1]**2 + vin.sigmas[1]**2)
 
@@ -112,37 +113,35 @@ phase, dphase = results[2:4]
 phase=agg(phase)
 gain, dgain = results[4:6]
 dgain=dgain#+gain*(1.44/100)
-dgaincal=dgain+gain*(2**0.5/100) #1/100 errore calibrazione.... 
+dgaincal=dgain+gain*(2**0.5/100) #1/100 errore calibrazione....
 ## graphing
 
-sfasamento = Graph(freqs, phase, dfreqs, dphase)
+def ampliphase(f, k1, k2):
+	return np.angle(beth(f, k1, k2))
+
+ampliphase.pars = [1,1]
+ampliphase.mask = ~np.isclose(freqs, 1975, atol=10, rtol=3e-3)  # outlier
+
+cose = Fitter(freqs, phase, dfreqs, dphase)
+cose.fit(ampliphase)
+
+sfasamento = Graph.from_fitter(cose)
 sfasamento.typeX = 'log'
-sfasamento.title="Frequenza vs fase"
-aperbeta = Graph(freqs, gain, dfreqs, dgain)
-aperbeta.typeX = 'log'
+sfasamento.title = "Frequenza vs fase"
 
-aperbeta.title="Frequenza vs guadagno"
+# aperbeta = Graph(freqs, gain, dfreqs, dgain)
+# aperbeta.typeX = 'log'
+# aperbeta.title="Frequenza vs guadagno"
 
-sfasamento.draw()
+sfasamento.draw(ampliphase, resid=True)
 aperbeta.draw()
 
 #plt.show()
 
 ## fits senza calibrazione
 
-<<<<<<< HEAD
 def amplificazione(f, A):
 	x=beth(f)*A   #ampligain(pot, x, diodes)
-=======
-def amplificazione(f, A, k):
-	x=beth1(k*f)*A   #ampligain(pot, x, diodes)
-
-	# ##### WTF???
-	# ##### è possibile che abbiamo un sistematico del 5% sulle frequenze???
-	# che sia il sistematico del multimetro sulle capacità? però cazzo è tanto
-	# e credo sarebbe la prima volta
-
->>>>>>> 8bc5d7fa6d28f1a4d4cfc302ed3c54a03ca46d73
 	return np.absolute(x)
 
 amplificazione.pars=[3.0, 1]
@@ -150,7 +149,6 @@ fitt = Fitter(freqs, gain, dfreqs, dgain)
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
 terzo.typeX = 'log'
-<<<<<<< HEAD
 terzo.title="Fit A ($Ab(f)$) senza errori di calibrazione"
 terzo.labelX="frequenza [Hz]"
 terzo.labelY="$A\beta(f)$"
@@ -158,7 +156,7 @@ terzo.draw(amplificazione)
 
 ##fit con calibrazione
 amplificazione.pars=[3.0]
-fitt = Fitter(freqs, gain, dfreqs, dgaincal) 
+fitt = Fitter(freqs, gain, dfreqs, dgaincal)
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
 terzo.typeX = 'log'
@@ -175,7 +173,7 @@ def amplificazione2(f, pot , x, diodes):
 	return np.absolute(x)
 
 amplificazione2.pars=[10000, 0.1, 4000]
-fitt = Fitter(freqs, gain, dfreqs, dgain) 
+fitt = Fitter(freqs, gain, dfreqs, dgain)
 fitt.fit(amplificazione2)
 quarto = Graph.from_fitter(fitt)
 quarto.typeX = 'log'
@@ -195,11 +193,6 @@ quinto=Graph(freqs, phase, dfreqs, dphase)
 fase.pars=[1]
 quinto.draw(fase)
 
-
-=======
-terzo.title="Fit"
-terzo.draw(amplificazione, resid=True)
->>>>>>> 8bc5d7fa6d28f1a4d4cfc302ed3c54a03ca46d73
 plt.show()
 
 

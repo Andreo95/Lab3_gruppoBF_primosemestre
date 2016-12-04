@@ -462,5 +462,5 @@ class Graph(object):
 			try:
 				res = fun.resd
 			except AttributeError:
-				res = (self.dataY - f(self.dataX, *fun.pars)) / self.errY
+				res = (self.dataY - fun(self.dataX, *fun.pars)) / self.errY
 			resd_ax.plot(x[mask] * self.reX, res, **resdkw)
