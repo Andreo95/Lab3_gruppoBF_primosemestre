@@ -48,6 +48,17 @@ def beth(f):
 	invb = 1 + R_1/R_2 * (1 + ws/wp + 1j*(w/wp - ws/w))
 	return 1/invb
 
+def par(R1, R2):
+	return (R1*R2)/(R1+R2)
+
+def beth1(f):
+	w=2*np.pi*f
+	RC_1=1j/(C_1*w)
+	RC_2=1j/(C_2*w)
+	para=par(R_2, RC_2)
+	return para/(para+RC_1+R_1)
+
+
 def agg(x):
 	return x+(2*(x<0)-1)*np.pi
 
@@ -82,14 +93,15 @@ for filename in os.listdir(csvdata):
 			vin.pars[1] -= np.pi
 		else:
 			vin.pars[1] += np.pi
-
+	#grafo=Graph.from_fitter(f)
+	#grafo.draw(vin)
 	phase = vout.pars[1] - vin.pars[1]
 	dphase = np.sqrt(vout.sigmas[1]**2 + vin.sigmas[1]**2)
-	#Av = 20 * np.log10(vout.pars[2] / vin.pars[2])
-	#dAv = 20 * np.log10(np.e) * np.sqrt(vout.sigmas[2]**2 / vout.pars[2]**2 + vin.sigmas[2]**2 / vin.pars[2]**2)
+	
+
 	Av=vout.pars[2]/vin.pars[2]
 	dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5 
-	avgf = 1e-4*(vout.pars[0]/vout.sigmas[0]**2 + (vin.pars[0]/vin.sigmas[0])**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
+	avgf =vout.pars[0]/(2*np.pi) #((vout.pars[0]/vout.sigmas[0])**2 + (vin.pars[0]/vin.sigmas[0])**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
 	df = 1 / np.sqrt(vout.sigmas[0]**-2 + vin.sigmas[0]**-2) / (2*np.pi)
 
 	results.append((avgf, df, phase, dphase, Av, dAv))
@@ -118,11 +130,12 @@ aperbeta.draw()
 
 ## fits
 
-def amplificazione(f, pot, x, diodes):
-	x=beth(f)*ampligain(pot, x, diodes)
+def amplificazione(f, A):
+	x=beth1(f)*A   #ampligain(pot, x, diodes)
+	
 	return np.absolute(x)
 
-amplificazione.pars=[5500, 0.1, 10000]
+amplificazione.pars=[3.0]
 fitt = Fitter(freqs, gain, dfreqs, dgain) 
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
