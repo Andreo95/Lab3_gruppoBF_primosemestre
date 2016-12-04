@@ -101,7 +101,7 @@ for filename in os.listdir(csvdata):
 
 	Av=vout.pars[2]/vin.pars[2]
 	dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5 
-	avgf =vout.pars[0]/(2*np.pi) #((vout.pars[0]/vout.sigmas[0])**2 + (vin.pars[0]/vin.sigmas[0])**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
+	avgf =(vout.pars[0]/vout.sigmas[0]**2 + vin.pars[0]/vin.sigmas[0]**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
 	df = 1 / np.sqrt(vout.sigmas[0]**-2 + vin.sigmas[0]**-2) / (2*np.pi)
 
 	results.append((avgf, df, phase, dphase, Av, dAv))
