@@ -96,10 +96,10 @@ for filename in os.listdir(csvdata):
 	
 	phase = vout.pars[1] - vin.pars[1]
 	dphase = np.sqrt(vout.sigmas[1]**2 + vin.sigmas[1]**2)
-	
+
 
 	Av=vout.pars[2]/vin.pars[2]
-	dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5 
+	dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5
 	avgf =(vout.pars[0]/vout.sigmas[0]**2 + vin.pars[0]/vin.sigmas[0]**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
 	df = 1 / np.sqrt(vout.sigmas[0]**-2 + vin.sigmas[0]**-2) / (2*np.pi)
 
@@ -130,15 +130,27 @@ aperbeta.draw()
 
 ## fits senza calibrazione
 
+<<<<<<< HEAD
 def amplificazione(f, A):
 	x=beth(f)*A   #ampligain(pot, x, diodes)
+=======
+def amplificazione(f, A, k):
+	x=beth1(k*f)*A   #ampligain(pot, x, diodes)
+
+	# ##### WTF???
+	# ##### è possibile che abbiamo un sistematico del 5% sulle frequenze???
+	# che sia il sistematico del multimetro sulle capacità? però cazzo è tanto
+	# e credo sarebbe la prima volta
+
+>>>>>>> 8bc5d7fa6d28f1a4d4cfc302ed3c54a03ca46d73
 	return np.absolute(x)
 
-amplificazione.pars=[3.0]
-fitt = Fitter(freqs, gain, dfreqs, dgain) 
+amplificazione.pars=[3.0, 1]
+fitt = Fitter(freqs, gain, dfreqs, dgain)
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
 terzo.typeX = 'log'
+<<<<<<< HEAD
 terzo.title="Fit A ($Ab(f)$) senza errori di calibrazione"
 terzo.labelX="frequenza [Hz]"
 terzo.labelY="$A\beta(f)$"
@@ -184,6 +196,10 @@ fase.pars=[1]
 quinto.draw(fase)
 
 
+=======
+terzo.title="Fit"
+terzo.draw(amplificazione, resid=True)
+>>>>>>> 8bc5d7fa6d28f1a4d4cfc302ed3c54a03ca46d73
 plt.show()
 
 
