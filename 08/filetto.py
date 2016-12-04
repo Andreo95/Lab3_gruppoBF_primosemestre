@@ -135,15 +135,18 @@ terzo.labelX="frequenza [Hz]"
 terzo.labelY="$A\beta(f)$"
 terzo.draw(amplificazione, resid=True)
 
-# ##fit con calibrazione --peroa non richiesto
-# amplificazione.pars=[3.0, C_1, C_2]
-# fitt = Fitter(freqs, gain, dfreqs, dgaincal) 
-# fitt.fit(amplificazione)
-# terzo = Graph.from_fitter(fitt)
-# terzo.typeX = 'log'
-# terzo.title="Fit A ($Ab(f)$)"
-# terzo.labelX="frequenza [Hz]"
-# terzo.labelY="$A\beta(f)$"
-# terzo.draw(amplificazione, resid=True)
+
+print("rifitto con outliers...")
+mask=np.absolute(amplificazione.resd)<5
+fitt = Fitter(freqs[mask], gain[mask], dfreqs[mask], dgain[mask]) 
+#amplificazione.mask=[np.absolute(amplificazione.resd)<5]
+fitt.fit(amplificazione)
+terzo = Graph.from_fitter(fitt)
+terzo.typeX = 'log'
+terzo.title="Fit A ($Ab(f)$), senza outlier"
+terzo.labelX="frequenza [Hz]"
+terzo.labelY="$A\beta(f)$"
+terzo.draw(amplificazione, resid=True)
+
 
 plt.show()
