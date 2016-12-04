@@ -30,15 +30,6 @@ R_5 = 9.90e3
 C_1 = 10.81e-9 #nF
 C_2 = 10.11e-9 #nF
 
-def ampligain(pot, x, rdiodes='ignore'):
-    # guadagno dell'opamp come ampli non invertente
-    if rdiodes == 'ignore':
-        R_d = R_3
-    else:
-        R_d = rdiodes
-    return 1 + (R_4 + R_d + (1-x)*pot) / (R_5 + x*pot)
-
-
 def beth(f, C1, C2):
     # attenuazione della rete di feedback (di wien)
     # OCCHIO: è complessa, ci sarà da prenderne modulo e argomento...
@@ -48,15 +39,15 @@ def beth(f, C1, C2):
     invb = 1 + R_1/R_2 * (1 + ws/wp + 1j*(w/wp - ws/w))
     return 1/invb
 
-def par(R1, R2):
-    return (R1*R2)/(R1+R2)
-
-def beth1(f):
-    w=2*np.pi*f
-    RC_1=1j/(C_1*w)
-    RC_2=1j/(C_2*w)
-    para=par(R_2, RC_2)
-    return para/(para+RC_1+R_1)
+# def par(R1, R2):
+#     return (R1*R2)/(R1+R2)
+# 
+# def beth1(f):
+#     w=2*np.pi*f
+#     RC_1=1j/(C_1*w)
+#     RC_2=1j/(C_2*w)
+#     para=par(R_2, RC_2)
+#     return para/(para+RC_1+R_1)
 
 
 def agg(x):
@@ -86,7 +77,7 @@ for filename in os.listdir(csvdata):
     f = Fitter(o.T1, o.CH1, np.ones(len(o.CH1))*mme(np.amax(o.T1)-np.amin(o.T1), 'time', 'oscil'), np.ones(len(o.CH2))*o.dCH1)
     vin = newsine()
     vin.pars = [2*np.pi*freq, 0, 1, 0]
-    f.fit(vin, verbose=False)
+    f.fit(vin, verbose=True)
     if vin.pars[2] < 0:
         vin.pars[2] *= -1
         if vin.pars[1] > 0:
@@ -112,7 +103,7 @@ phase, dphase = results[2:4]
 phase=agg(phase)
 gain, dgain = results[4:6]
 dgain=dgain#+gain*(1.44/100)
-dgaincal=dgain+gain*(2**0.5/100) #1/100 errore calibrazione oscilloscopio? Penso che le due tracce siano acquisite in maniera indipendente.... 
+#dgaincal=dgain+gain*(2**0.5/100) #1/100 errore calibrazione oscilloscopio? Penso che le due tracce siano acquisite in maniera indipendente.... 
 ## graphing
 
 sfasamento = Graph(freqs, phase, dfreqs, dphase)
@@ -142,50 +133,20 @@ terzo.typeX = 'log'
 terzo.title="Fit A ($Ab(f)$) senza errori di calibrazione"
 terzo.labelX="frequenza [Hz]"
 terzo.labelY="$A\beta(f)$"
-terzo.draw(amplificazione)
+terzo.draw(amplificazione, resid=True)
 
-##fit con calibrazione
-amplificazione.pars=[3.0, C_1, C_2]
-fitt = Fitter(freqs, gain, dfreqs, dgaincal) 
+
+print("rifitto con outliers...")
+mask=np.absolute(amplificazione.resd)<5
+fitt = Fitter(freqs[mask], gain[mask], dfreqs[mask], dgain[mask]) 
+#amplificazione.mask=[np.absolute(amplificazione.resd)<5]
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
 terzo.typeX = 'log'
-terzo.title="Fit A ($Ab(f)$)"
+terzo.title="Fit A ($Ab(f)$), senza outlier"
 terzo.labelX="frequenza [Hz]"
 terzo.labelY="$A\beta(f)$"
-terzo.draw(amplificazione)
-
-print("si vede come il chiq torni tantissimo!")
-
-###overfitting?...
-def amplificazione2(f, pot , x, diodes):
-    x=beth(f)*ampligain(pot, x, diodes)
-    return np.absolute(x)
-
-amplificazione2.pars=[10000, 0.1, 4000]
-fitt = Fitter(freqs, gain, dfreqs, dgain) 
-fitt.fit(amplificazione2)
-quarto = Graph.from_fitter(fitt)
-quarto.typeX = 'log'
-quarto.title="Fit"
-quarto.draw(amplificazione2)
-
-
-
-print("chiaramente non cambia nulla fra i due modelli, forse è meglio mettere direttamente la A")
-
-
-def fase(f, g):
-    print(g)
-    return np.arctan(np.imag(beth(f)), np.real(beth(f)))
-
-quinto=Graph(freqs, phase, dfreqs, dphase)
-fase.pars=[1]
-quinto.draw(fase)
+terzo.draw(amplificazione, resid=True)
 
 
 plt.show()
-
-
-# sorter = np.argsort(freqs)
-# freqs, phase, gain = np.array([freqs, phase, gain])[:,sorter]
