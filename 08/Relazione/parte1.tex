@@ -34,5 +34,14 @@ che, riportato all'ingresso non invertente dell'OpAmp, rende il circuito un osci
 Intendiamo innanzitutto misuare il guadagno della rete di feedback di Wien: abbiamo dunque collegato l'ingresso
 non invertente dell'OpAmp al generatore d'onda e inviato un sengale sinusoidale di ampiezza picco-picco $\approx \SI{500}{\mV}$
 a varie frequenze comprese tra \SIrange[range-phrase = \text{ e }]{500}{3000}{\Hz},
-misurando il segnale in uscita al punto A del circuito.
+misurando il segnale in uscita al punto A del circuito. Utilizzando il softare OpenChoice si sono presi i dati per ogni singola sinusoide in entrata ed uscita. Lo scopo è dunque fare un fit a tali segnali per ottenerne ampiezza,frequenza, fase ed un eventuale offset.Tale procedura è stata eseguita per ogni frequenza nel range prima considerato.
+Inseguito si è eseguito un altro fit del guadagno $A=\left | \frac{V_A}{V_+} \right | $ moltiplicato in termine di feedback $\beta$ in funzione della frequenza secondo la formula $\beta A= (\frac{1}{1+\frac{R_1}{R_2}(1+\frac{\omega_s}{\omega_p}+i(\frac{\omega}{\omega_p}-\frac{\omega_s}{\omega} ))})(1 + \frac{(1-x)Pot+R_4+R_3 \paral D_1 \paral D_2}{R_5+xPot})$. 
+\footnote{Si è indicato $\omega=2 \pi f$, $\omega_p= \frac{1}{R_2C_2}$ e $\omega_s=\frac{1}{R_1C_1}$. Si è tenuto conto dei valori reali delle resistenze e dei condensatori che essendo diversi tra loro rendono piu complicata l'espressione di $\beta$. }
+Dal fit si sono ottenuti i seguenti valori:\\
+$Pot= \SI{}{\kohm}$\\
+$x= \SI{}{}$\\ 
+$R_diodi= \SI{}{}$\\
+$\chi^2 =  ( \dof, p = )$\\
+Dal curva di fit inoltre si ricava la frequenza per la quale la fase di $\frac{V_A}{V_+}$ è nulla, che risulta essere $\SI{}{\Hz}$.  Dall'analisi del circuito si vede che tale frequenza è $f=\frac{1}{2 \pi \sqrt{R_1C_1R_2C_2}}= \SI{1.53(8)}{\kHz}$.
 
+Variando la posizione del potenziometro si osserva che aumentando la resistenza verso $R_5$ si osserva una diminuzione dell'ampiezza del segnale in uscita , viceversa un aumento dell'ampiezza girando dalla parte opposta. Tale comportamento è analogo a quello presente in un OpAmp con feedback solo negativo .
