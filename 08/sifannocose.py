@@ -99,9 +99,9 @@ for filename in os.listdir(csvdata):
 	dphase = np.sqrt(vout.sigmas[1]**2 + vin.sigmas[1]**2)
 
 
-	Av=vout.pars[2]/vin.pars[2]
-	dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5
-	avgf =(vout.pars[0]/vout.sigmas[0]**2 + vin.pars[0]/vin.sigmas[0]**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
+	Av = vout.pars[2]/vin.pars[2]
+	dAv = Av * np.sqrt((vout.sigmas[2]/vout.pars[2])**2 + vin.sigmas[2]**2 / vin.pars[2]**2)
+	avgf = (vout.pars[0]/vout.sigmas[0]**2 + vin.pars[0]/vin.sigmas[0]**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
 	df = 1 / np.sqrt(vout.sigmas[0]**-2 + vin.sigmas[0]**-2) / (2*np.pi)
 
 	results.append((avgf, df, phase, dphase, Av, dAv))
@@ -114,87 +114,43 @@ phase=agg(phase)
 gain, dgain = results[4:6]
 dgain=dgain#+gain*(1.44/100)
 dgaincal=dgain+gain*(2**0.5/100) #1/100 errore calibrazione....
+
+likely_outliers = np.isclose(freqs, 1975, atol=10, rtol=3e-3)  # outlier
 ## graphing
 
 def ampliphase(f, k1, k2):
 	return np.angle(beth(f, k1, k2))
 
 ampliphase.pars = [1,1]
-ampliphase.mask = ~np.isclose(freqs, 1975, atol=10, rtol=3e-3)  # outlier
+ampliphase.mask = ~likely_outliers
 
 cose = Fitter(freqs, phase, dfreqs, dphase)
 cose.fit(ampliphase)
 
 sfasamento = Graph.from_fitter(cose)
 sfasamento.typeX = 'log'
-sfasamento.title = "Frequenza vs fase"
-
-# aperbeta = Graph(freqs, gain, dfreqs, dgain)
-# aperbeta.typeX = 'log'
-# aperbeta.title="Frequenza vs guadagno"
+sfasamento.title = "Loop Gain, fase"
 
 sfasamento.draw(ampliphase, resid=True)
-aperbeta.draw()
+sfasamento.main_ax.scatter(freqs[likely_outliers], phase[likely_outliers], s=80, facecolors='none', edgecolors='r', label='outlier')
 
-#plt.show()
+## fit con scazzo di capacità
 
-## fits senza calibrazione
-
-def amplificazione(f, A):
-	x=beth(f)*A   #ampligain(pot, x, diodes)
+def amplificazione(f, A, k1, k2):
+	x=beth(f, k1, k2)*A   #se invece che lasciare i k liberi uso quelli di prima il chi2 viene >100
 	return np.absolute(x)
 
-amplificazione.pars=[3.0, 1]
-fitt = Fitter(freqs, gain, dfreqs, dgain)
-fitt.fit(amplificazione)
-terzo = Graph.from_fitter(fitt)
-terzo.typeX = 'log'
-terzo.title="Fit A ($Ab(f)$) senza errori di calibrazione"
-terzo.labelX="frequenza [Hz]"
-terzo.labelY="$A\beta(f)$"
-terzo.draw(amplificazione)
-
-##fit con calibrazione
-amplificazione.pars=[3.0]
-fitt = Fitter(freqs, gain, dfreqs, dgaincal)
-fitt.fit(amplificazione)
-terzo = Graph.from_fitter(fitt)
-terzo.typeX = 'log'
-terzo.title="Fit A ($Ab(f)$)"
-terzo.labelX="frequenza [Hz]"
-terzo.labelY="$A\beta(f)$"
-terzo.draw(amplificazione)
-
-print("si vede come il chiq torni tantissimo!")
-
-###overfitting?...
-def amplificazione2(f, pot , x, diodes):
-	x=beth(f)*ampligain(pot, x, diodes)
-	return np.absolute(x)
-
-amplificazione2.pars=[10000, 0.1, 4000]
-fitt = Fitter(freqs, gain, dfreqs, dgain)
-fitt.fit(amplificazione2)
-quarto = Graph.from_fitter(fitt)
-quarto.typeX = 'log'
-quarto.title="Fit"
-quarto.draw(amplificazione2)
+amplificazione.pars = [3, *ampliphase.pars]
+amplificazione.mask = ~likely_outliers
 
 
+altrecose = Fitter(freqs, gain, dfreqs, dgain)
+altrecose.fit(amplificazione)
 
-print("chiaramente non cambia nulla fra i due modelli, forse è meglio mettere direttamente la A")
-
-
-def fase(f, g):
-	print(g)
-	return np.arctan(np.imag(beth(f)), np.real(beth(f)))
-
-quinto=Graph(freqs, phase, dfreqs, dphase)
-fase.pars=[1]
-quinto.draw(fase)
+aperbeta = Graph.from_fitter(altrecose)
+aperbeta.typeX = 'log'
+aperbeta.title = "Loop Gain ($\\beta A$)"
+aperbeta.draw(amplificazione, resid=True)
+aperbeta.main_ax.scatter(freqs[likely_outliers], gain[likely_outliers], s=80, facecolors='none', edgecolors='r', label='outlier')
 
 plt.show()
-
-
-# sorter = np.argsort(freqs)
-# freqs, phase, gain = np.array([freqs, phase, gain])[:,sorter]
