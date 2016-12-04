@@ -135,6 +135,8 @@ def amplificazione(f, A, k):
 
 	# ##### WTF???
 	# ##### è possibile che abbiamo un sistematico del 5% sulle frequenze???
+	# che sia il sistematico del multimetro sulle capacità? però cazzo è tanto
+	# e credo sarebbe la prima volta
 
 	return np.absolute(x)
 
