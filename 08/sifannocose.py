@@ -93,8 +93,7 @@ for filename in os.listdir(csvdata):
 			vin.pars[1] -= np.pi
 		else:
 			vin.pars[1] += np.pi
-	#grafo=Graph.from_fitter(f)
-	#grafo.draw(vin)
+	
 	phase = vout.pars[1] - vin.pars[1]
 	dphase = np.sqrt(vout.sigmas[1]**2 + vin.sigmas[1]**2)
 	
@@ -112,7 +111,8 @@ freqs, dfreqs = results[0:2]
 phase, dphase = results[2:4]
 phase=agg(phase)
 gain, dgain = results[4:6]
-
+dgain=dgain#+gain*(1.44/100)
+dgaincal=dgain+gain*(2**0.5/100) #1/100 errore calibrazione.... 
 ## graphing
 
 sfasamento = Graph(freqs, phase, dfreqs, dphase)
@@ -128,11 +128,10 @@ aperbeta.draw()
 
 #plt.show()
 
-## fits
+## fits senza calibrazione
 
 def amplificazione(f, A):
-	x=beth1(f)*A   #ampligain(pot, x, diodes)
-	
+	x=beth(f)*A   #ampligain(pot, x, diodes)
 	return np.absolute(x)
 
 amplificazione.pars=[3.0]
@@ -140,8 +139,51 @@ fitt = Fitter(freqs, gain, dfreqs, dgain)
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
 terzo.typeX = 'log'
-terzo.title="Fit"
+terzo.title="Fit A ($Ab(f)$) senza errori di calibrazione"
+terzo.labelX="frequenza [Hz]"
+terzo.labelY="$A\beta(f)$"
 terzo.draw(amplificazione)
+
+##fit con calibrazione
+amplificazione.pars=[3.0]
+fitt = Fitter(freqs, gain, dfreqs, dgaincal) 
+fitt.fit(amplificazione)
+terzo = Graph.from_fitter(fitt)
+terzo.typeX = 'log'
+terzo.title="Fit A ($Ab(f)$)"
+terzo.labelX="frequenza [Hz]"
+terzo.labelY="$A\beta(f)$"
+terzo.draw(amplificazione)
+
+print("si vede come il chiq torni tantissimo!")
+
+###overfitting?...
+def amplificazione2(f, pot , x, diodes):
+	x=beth(f)*ampligain(pot, x, diodes)
+	return np.absolute(x)
+
+amplificazione2.pars=[10000, 0.1, 4000]
+fitt = Fitter(freqs, gain, dfreqs, dgain) 
+fitt.fit(amplificazione2)
+quarto = Graph.from_fitter(fitt)
+quarto.typeX = 'log'
+quarto.title="Fit"
+quarto.draw(amplificazione2)
+
+
+
+print("chiaramente non cambia nulla fra i due modelli, forse è meglio mettere direttamente la A")
+
+
+def fase(f, g):
+	print(g)
+	return np.arctan(np.imag(beth(f)), np.real(beth(f)))
+
+quinto=Graph(freqs, phase, dfreqs, dphase)
+fase.pars=[1]
+quinto.draw(fase)
+
+
 plt.show()
 
 
