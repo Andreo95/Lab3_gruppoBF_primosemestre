@@ -39,12 +39,12 @@ def ampligain(pot, x, rdiodes='ignore'):
     return 1 + (R_4 + R_d + (1-x)*pot) / (R_5 + x*pot)
 
 
-def beth(f):
+def beth(f, C1, C2):
     # attenuazione della rete di feedback (di wien)
     # OCCHIO: è complessa, ci sarà da prenderne modulo e argomento...
     w = 2*np.pi*f
-    ws = 1/(R_1 * C_1)
-    wp = 1/(R_2 * C_2)
+    ws = 1/(R_1 * C1)
+    wp = 1/(R_2 * C2)
     invb = 1 + R_1/R_2 * (1 + ws/wp + 1j*(w/wp - ws/w))
     return 1/invb
 
@@ -99,7 +99,7 @@ for filename in os.listdir(csvdata):
     
     
     Av=vout.pars[2]/vin.pars[2]
-    dAv=((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5 
+    dAv=Av*((vout.sigmas[2]/vout.pars[2])**2+ vin.sigmas[2]**2 / vin.pars[2]**2)**0.5 
     avgf =(vout.pars[0]/vout.sigmas[0]**2 + vin.pars[0]/vin.sigmas[0]**2)/(vout.sigmas[0]**-2 + vin.sigmas[0]**-2)/(2*np.pi)
     df = 1 / np.sqrt(vout.sigmas[0]**-2 + vin.sigmas[0]**-2) / (2*np.pi)
 
@@ -130,11 +130,11 @@ aperbeta.draw()
 
 ## fits senza calibrazione
 
-def amplificazione(f, A):
-    x=beth(f)*A   #ampligain(pot, x, diodes)
+def amplificazione(f, A, C1, C2):
+    x=beth(f, C1, C2)*A   #ampligain(pot, x, diodes)
     return np.absolute(x)
 
-amplificazione.pars=[3.0]
+amplificazione.pars=[3.0, C_1, C_2]
 fitt = Fitter(freqs, gain, dfreqs, dgain) 
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
@@ -145,7 +145,7 @@ terzo.labelY="$A\beta(f)$"
 terzo.draw(amplificazione)
 
 ##fit con calibrazione
-amplificazione.pars=[3.0]
+amplificazione.pars=[3.0, C_1, C_2]
 fitt = Fitter(freqs, gain, dfreqs, dgaincal) 
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
