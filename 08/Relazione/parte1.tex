@@ -40,7 +40,7 @@ Si è eseguito il fit del guadagno $A=\left | \frac{V_A}{V_+} \right | $ moltipl
 
 \begin{figure}[h]
 	\centering
-	\includegraphics{loopgain.pdf}
+	\includegraphics[scale=.7]{loopgain.pdf}
 	\caption{Loop gain e relativo fit.}
 	\label{f:lpgn}
 \end{figure}
@@ -55,16 +55,17 @@ $corr_{A,C2}=-0.98$\\
 $\chi^2=21.26 (9 \dof, p = 0.01)$
 
 Bisogna tenere presente che $A$ è ancora soggetto a un errore sistematico del $1.4 \%$ dovuto alle calibrazioni relative dei due canali dell'oscilloscopio. Il valore stimato di $A$ è dunque $2.876 \pm 0.04$, se non fosse che il fit non risulta statisticamente significativo, forse per una eccessiva fiducia nei parametri nella stima dei parametri.
-Si nota che, in generale, il fit suggerisce una sottostima da parte del multimetro, dei  valori delle capacità.  
+Si nota che, in generale, il fit suggerisce una sottostima da parte del multimetro, dei  valori delle capacità.
 
 
 Stessa cosa è stata fatta per la fase. Con la stessa procedura si è ottenuto il seguente fit e i seguenti risultati:
 \begin{figure}[h]
 	\centering
-	\includegraphics{phase.pdf}
+	\includegraphics[scale=.7]{phase.pdf}
 	\caption{Fase introdotta dal loop e relativo fit.}
-	\label{f:lpgn}
+	\label{f:lpfs}
 \end{figure}
+\\
 $C_1=\SI{10.336 \pm 0.05}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.81\pm 0.43}{nF}$\\
 $C_2=\SI{9.73\pm 0.06}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.11\pm 0.42}{nF}$\\
 $corr_{C_1, C_2}=-0.95$\\
@@ -72,10 +73,10 @@ $\chi^2=26.45 (10 \dof, p = 0.01)$ anche questa volta non statisticamente signif
 
 
 Anche qui i valori delle capacità sono compatibili con quanto misurato con il multimetro, ma non risultano compatibili con quanto misurato con le ampiezze. Questo può essere dovuto agli errori di calibrazione su A ? Si potrebbe pensare dunque di migliorare la misura di A usando i valori delle resistenze trovate con il fit della fase per il fit dell'ampiezza (ora si fitterebbe solo il parametro A). %no, si potrebbe anche non fare, facendo così il chiq è 81!!!!
- 
+
 
 Dal curva di fit inoltre si ricava la frequenza per la quale la fase di $\frac{V_A}{V_+}$ è nulla, che risulta essere $\SI{1595 \pm 7}{\Hz}$\footnote{Compatibile con quanto misurato al punto 3, $\SI{1600 \pm 5}{\Hz}$}.%usando la formula di sotto, con i valori trovati in fit fase
-Dall'analisi del circuito la frequenza stimata con i valori dati dal multimetro delle capacità è $f=\frac{1}{2 \pi \sqrt{R_1C_1R_2C_2}}= \SI{1.53(8)}{\kHz}$. Le due frequenze sono chiaramente compatibili. 
+Dall'analisi del circuito la frequenza stimata con i valori dati dal multimetro delle capacità è $f=\frac{1}{2 \pi \sqrt{R_1C_1R_2C_2}}= \SI{1.53(8)}{\kHz}$. Le due frequenze sono chiaramente compatibili.
 
 
 Variando la posizione del potenziometro si osserva che aumentando la resistenza verso $R_5$ si osserva una diminuzione dell'ampiezza del segnale in uscita , viceversa un aumento dell'ampiezza girando dalla parte opposta. Tale comportamento è analogo a quello presente in un OpAmp con feedback solo negativo .

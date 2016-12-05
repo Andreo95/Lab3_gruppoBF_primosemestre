@@ -4,7 +4,7 @@
 	\includegraphics{parte5_con.png}
 	\caption{Circuito con entrambi i diodi inseriti.Si osserva l'oscillazione attesa con frequenza discussa nella sezione precedente.}
 	\label{f:con_diodi}
-\end{figure}	
+\end{figure}
 
 \begin{figure}[h]
 	\centering
@@ -20,4 +20,4 @@
 	\label{f:senza_2diodi}
 \end{figure}
 Si sono analizzate varie configurazioni del circuito al variare del numero di diodi inseriti. In \fig{con_diodi},\ref{f:senza_1diodo} e \ref{f:senza_2diodi} si osservano le tre configurazioni analizzate.Nel canale uno c'è l'ingresso del generatore mentre sul secondo canale l'uscita $V_{out}$.
-Il ruolo dei diodi in tale circuito è quello di evitare che l'uscita vada in saturazione.Infatti per segnali con ampiezza molto maggiore di $V_\gamma \approx 0.6$V la resistenza dei diodi è molto minore di $R_3$ e quindi è equivalente a dire che quest'ultima resistenza è cortocircuitata.Tale effetto diminuisce notevolmente il guadagno. Quindi è normale aspettarsi che rimuovendo i due diodi, non si possa ottenere tale effetto sul guadagno e quindi si osserva il clipping del segnale.
+Il ruolo dei diodi in tale circuito è quello stabilizzare l'amplificazione dell'amplificatore non invertente realizzato dall'OpAmp. Infatti per segnali con ampiezza molto maggiore di $V_\gamma \approx 0.6$V la resistenza dei diodi è molto minore di $R_3$ e quindi è equivalente a dire che quest'ultima resistenza è cortocircuitata. Tale effetto diminuisce notevolmente il guadagno, permettendo di raggiungre un loop gain unitario. Quindi è normale aspettarsi che rimuovendo i due diodi, non si possa ottenere tale effetto sul guadagno e quindi si osserva il clipping del segnale, poiché se il loop gain fosse da principio minore o pari a 1 non osserveremmo l'innesco delle oscillazioni, dunque si raggiunge la saturazione dell'OpAmp.
