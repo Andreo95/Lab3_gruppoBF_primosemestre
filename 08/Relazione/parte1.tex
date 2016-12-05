@@ -35,7 +35,7 @@ Intendiamo innanzitutto misuare il guadagno della rete di feedback di Wien: abbi
 non invertente dell'OpAmp al generatore d'onda e inviato un sengale sinusoidale di ampiezza picco-picco $\approx \SI{500}{\mV}$
 a varie frequenze comprese tra \SIrange[range-phrase = \text{ e }]{500}{3000}{\Hz},
 misurando il segnale in uscita al punto A del circuito. Utilizzando il softare OpenChoice si sono presi i dati per ogni singola sinusoide in entrata ed uscita. Lo scopo è dunque fare un fit a tali segnali per ottenerne ampiezza,frequenza, fase ed un eventuale offset.Tale procedura è stata eseguita per ogni frequenza nel range prima considerato. Questo a permesso di trovare le ampiezze con una precisione, a patto di fattori di calibrazione, dell'ordine del 5 \textperthousand , dunque un incertezza sull'amplificazione (sempre a meno di fattori di calibrazione) dell'ordine del 7 \textperthousand.
-Si è eseguito il fit del guadagno $A=\left | \frac{V_A}{V_+} \right | $ moltiplicato per il termine di feedback $\beta$ in funzione della frequenza secondo la formula $\beta A= (\frac{1}{1+\frac{R_1}{R_2}(1+\frac{\omega_s}{\omega_p}+i(\frac{\omega}{\omega_p}-\frac{\omega_s}{\omega} ))})(1 + \frac{(1-x)Pot+R_4+R_3 \paral D_1 \paral D_2}{R_5+xPot})$. Si ricorda che indicato $\omega=2 \pi f$, $\omega_p= \frac{1}{R_2C_2}$ e $\omega_s=\frac{1}{R_1C_1}$. Si sono dunque fittate l'amplificazione in funzione della frequenza ottenendo la seguente curva \ref{f:lpgn} .%non so se è il caso di parlare di outilers...
+Si è eseguito il fit del guadagno $A=\left | \frac{V_A}{V_+} \right | $ moltiplicato per il termine di feedback $\beta$ in funzione della frequenza secondo la formula $\beta A= (\frac{1}{1+\frac{R_1}{R_2}(1+\frac{\omega_s}{\omega_p}+i(\frac{\omega}{\omega_p}-\frac{\omega_s}{\omega} ))})(1 + \frac{(1-x)Pot+R_4+R_3 \paral D_1 \paral D_2}{R_5+xPot})$. Si ricorda che indicato $\omega=2 \pi f$, $\omega_p= \frac{1}{R_2C_2}$ e $\omega_s=\frac{1}{R_1C_1}$. Si è dunque fittate l'amplificazione in funzione della frequenza ottenendo la seguente curva \ref{f:lpgn} .\footnote{Il punto cerchiato in rosso è un outlier, da solo contribuiva a più di metà de $\chi^2$, dunque è stato scartato}
 
 
 \begin{figure}[h]
@@ -48,10 +48,29 @@ Si è eseguito il fit del guadagno $A=\left | \frac{V_A}{V_+} \right | $ moltipl
 Dal fit si sono ottenuti i seguenti valori:\\
 $A=2.876 \pm 0.01$\\
 $C_1=\SI{10.45 \pm 0.05}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.81\pm 0.43}{nF}$\\
-$C_2=\SI{9.44\pm 0.06}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.81\pm 0.42}{nF}$\\
+$C_2=\SI{9.44\pm 0.06}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.11\pm 0.42}{nF}$\\
 $corr_{C_1, C_2}=-0.92$\\
 $\chi^2=21.26 (9 \dof, p = 0.01)$
 
+Bisogna tenere presente che $A$ è ancora soggetto a un errore sistematico del $1.4 \%$ dovuto alle calibrazioni relative dei due canali dell'oscilloscopio. Il valore stimato di $A$ è dunque $2.876 \pm 0.04$, se non fosse che il fit non risulta statisticamente significativo, forse per una eccessiva fiducia nei parametri nella stima dei parametri.
+Si nota che, in generale, il fit suggerisce una sottostima da parte del multimetro, dei  valori delle capacità.  
+
+
+Stessa cosa è stata fatta per la fase. Con la stessa procedura si è ottenuto il seguente fit e i seguenti risultati:
+\begin{figure}[h]
+	\centering
+	\includegraphics{phase.pdf}
+	\caption{Fase introdotta dal loop e relativo fit.}
+	\label{f:lpgn}
+\end{figure}
+$C_1=\SI{10.336 \pm 0.05}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.81\pm 0.43}{nF}$\\
+$C_2=\SI{9.73\pm 0.06}{nF}$ da confrontare con il valore misurato con il multimetro, di $\SI{10.11\pm 0.42}{nF}$\\
+$corr_{C_1, C_2}=-0.95$\\
+$\chi^2=26.45 (10 \dof, p = 0.01)$ anche questa volta non statisticamente significativo
+
+
+Anche qui i valori delle capacità sono compatibili con quanto misurato con il multimetro, ma non risultano compatibili con quanto misurato con le ampiezze. %qualche spiegazione? Correlazione con A e errori di calibrazione?
+ 
 
 Dal curva di fit inoltre si ricava la frequenza per la quale la fase di $\frac{V_A}{V_+}$ è nulla, che risulta essere ???$\SI{}{\Hz}$.  Dall'analisi del circuito si vede che tale frequenza è $f=\frac{1}{2 \pi \sqrt{R_1C_1R_2C_2}}= \SI{1.53(8)}{\kHz}$.Sono compatibili le due frequenze???
 

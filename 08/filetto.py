@@ -143,7 +143,7 @@ fitt = Fitter(freqs[mask], gain[mask], dfreqs[mask], dgain[mask])
 fitt.fit(amplificazione)
 terzo = Graph.from_fitter(fitt)
 terzo.typeX = 'log'
-terzo.title="Fit A ($Ab(f)$), senza outlier"
+terzo.title="Fit A ($Ab(f)$)"#, senza outlier"
 terzo.labelX="frequenza [Hz]"
 terzo.labelY="$A\beta(f)$"
 terzo.draw(amplificazione, resid=True)
