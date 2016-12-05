@@ -130,6 +130,8 @@ cose.fit(ampliphase)
 sfasamento = Graph.from_fitter(cose)
 sfasamento.typeX = 'log'
 sfasamento.title = "Loop Gain, fase"
+sfasamento.labelX="Frequenza [Hz]"
+sfasamento.labelY="$\\Delta \\phi$ [rad]"
 
 sfasamento.draw(ampliphase, resid=True)
 sfasamento.main_ax.scatter(freqs[likely_outliers], phase[likely_outliers], s=80, facecolors='none', edgecolors='r', label='outlier')
@@ -149,7 +151,9 @@ altrecose.fit(amplificazione)
 
 aperbeta = Graph.from_fitter(altrecose)
 aperbeta.typeX = 'log'
-aperbeta.title = "Loop Gain ($\\beta A$)"
+aperbeta.title = "Loop Gain, modulo"
+aperbeta.labelX="Frequenza [Hz]"
+aperbeta.labelY="$\\beta A$"
 aperbeta.draw(amplificazione, resid=True)
 aperbeta.main_ax.scatter(freqs[likely_outliers], gain[likely_outliers], s=80, facecolors='none', edgecolors='r', label='outlier')
 
